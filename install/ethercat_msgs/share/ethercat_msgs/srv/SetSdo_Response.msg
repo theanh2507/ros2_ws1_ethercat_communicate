@@ -1,0 +1,1 @@
+/home/theanh/ros2_ws1/build/ethercat_msgs/rosidl_cmake/srv/SetSdo_Response.msg

@@ -1,0 +1,1 @@
+/home/theanh/ros2_ws1/build/ethercat_interface/ament_cmake_core/ethercat_interfaceConfig-version.cmake

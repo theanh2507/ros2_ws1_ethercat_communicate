@@ -1,0 +1,1 @@
+/home/theanh/ros2_ws1/build/ethercat_msgs/rosidl_generator_c/ethercat_msgs/srv/detail/get_sdo__functions.h

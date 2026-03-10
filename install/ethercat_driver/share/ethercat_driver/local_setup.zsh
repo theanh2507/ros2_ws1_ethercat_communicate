@@ -1,0 +1,1 @@
+/home/theanh/ros2_ws1/build/ethercat_driver/ament_cmake_environment_hooks/local_setup.zsh

@@ -1,0 +1,7 @@
+{
+  "package_name": "ethercat_msgs",
+  "non_idl_tuples": [
+    "/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_msgs:srv/SetSdo.srv",
+    "/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_msgs:srv/GetSdo.srv"
+  ]
+}

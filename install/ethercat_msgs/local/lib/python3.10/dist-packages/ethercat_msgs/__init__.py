@@ -1,0 +1,1 @@
+/home/theanh/ros2_ws1/build/ethercat_msgs/rosidl_generator_py/ethercat_msgs/__init__.py
