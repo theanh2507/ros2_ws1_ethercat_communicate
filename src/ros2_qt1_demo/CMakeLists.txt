@@ -19,7 +19,9 @@ find_package(ament_cmake REQUIRED)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 # find_package(ethercat_msgs REQUIRED)
-# find_package(rclcpp REQUIRED) 
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 # --------------------------------------------------------------------------
 # 3. QUẢN LÝ FILE NGUỒN (Lấy từ bản ROS 2)
@@ -43,6 +45,12 @@ add_executable(${PROJECT_NAME}
   ${RESOURCES}
 )
 
+ament_target_dependencies(${PROJECT_NAME}
+  rclcpp
+  std_msgs
+  geometry_msgs
+)
+
 # Thư mục include cho ROS 2
 target_include_directories(${PROJECT_NAME} PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -50,9 +58,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 )
 
 # Liên kết thư viện Qt
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${PROJECT_NAME}
   Qt5::Widgets
-  # rclcpp::rclcpp
 )
 
 # --------------------------------------------------------------------------

@@ -91,13 +91,13 @@ def generate_launch_description():
         output='screen'
     )
 
-    delay_trajectory_controller = RegisterEventHandler(
+    delay_controller = RegisterEventHandler(
         event_handler=OnProcessExit(
             target_action=joint_state_broadcaster_spawner,
             on_exit=[
                 TimerAction(
-                    period=20.0,
-                    actions=[trajectory_controller_spawner],
+                    period=10.0,
+                    actions=[velocity_controller_spawner],
                 )]
         )
     )
@@ -108,7 +108,7 @@ def generate_launch_description():
         joint_state_broadcaster_spawner,
         # velocity_controller_spawner,
         # trajectory_controller_spawner,
-        delay_trajectory_controller,
+        delay_controller,
         # rviz_node,
     ]
 
@@ -117,3 +117,7 @@ def generate_launch_description():
 # ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.0]}"
 # ros2 topic pub --once /trajectory_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory '{points: [{positions: [10000, 5000], time_from_start: {sec: 2, nanosec: 0}}], joint_names: ["joint_1","joint_2"]}'
 # ros2 topic pub --once /trajectory_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory '{points: [{positions: [10000], time_from_start: {sec: 2, nanosec: 0}}], joint_names: ["joint_1"]}'
+
+
+# ros2 service call /ethercat_manager/get_sdo ethercat_msgs/srv/GetSdo "{master_id: 0, slave_position: 0, sdo_index: 0x6041, sdo_subindex: 0, sdo_data_type: 'uint16'}"
+# ros2 service call /ethercat_manager/set_sdo ethercat_msgs/srv/SetSdo "{master_id: 0, slave_position: 0, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: 15}"

@@ -1,0 +1,27 @@
+[0.019s] Invoking command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex -- -j16 -l16
+[0.055s] Invoked command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex -- -j16 -l16
+[0.066s] Invoking command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex
+[0.074s] -- Install configuration: ""
+[0.074s] -- Execute custom install script
+[0.075s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/launch/robot_control.launch.py
+[0.075s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/config/hexapod_controller.yaml
+[0.075s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/config/motor_config.yaml
+[0.075s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/motor_drive.ros2_control.xacro
+[0.075s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/robot.urdf.xacro
+[0.075s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/robot_core.xacro
+[0.076s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/package_run_dependencies/control_one_motor_pkg_ex
+[0.076s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/parent_prefix_path/control_one_motor_pkg_ex
+[0.076s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/ament_prefix_path.sh
+[0.076s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/ament_prefix_path.dsv
+[0.076s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/path.sh
+[0.076s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/path.dsv
+[0.077s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.bash
+[0.077s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.sh
+[0.077s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.zsh
+[0.077s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.dsv
+[0.077s] -- Symlinking: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.dsv
+[0.088s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/packages/control_one_motor_pkg_ex
+[0.088s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/cmake/control_one_motor_pkg_exConfig.cmake
+[0.088s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/cmake/control_one_motor_pkg_exConfig-version.cmake
+[0.088s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.xml
+[0.091s] Invoked command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex

@@ -447,3 +447,151 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_34bc8/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_34bc8.dir/build.make CMakeFiles/cmTC_34bc8.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34bc8.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_34bc8.dir/CheckIncludeFile.c.o -c /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_34bc8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34bc8.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_34bc8.dir/CheckIncludeFile.c.o -o cmTC_34bc8 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8e5e2/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_8e5e2.dir/build.make CMakeFiles/cmTC_8e5e2.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e5e2.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_8e5e2.dir/src.c.o -c /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8e5e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e5e2.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_8e5e2.dir/src.c.o -o cmTC_8e5e2 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_372f7/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_372f7.dir/build.make CMakeFiles/cmTC_372f7.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_372f7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_372f7.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_372f7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_372f7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_372f7.dir/CheckFunctionExists.c.o -o cmTC_372f7  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a0d09/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_a0d09.dir/build.make CMakeFiles/cmTC_a0d09.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a0d09.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_a0d09.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a0d09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0d09.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_a0d09.dir/CheckFunctionExists.c.o -o cmTC_a0d09 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_20ccc/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_20ccc.dir/build.make CMakeFiles/cmTC_20ccc.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20ccc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_20ccc.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20ccc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20ccc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_20ccc.dir/CheckFunctionExists.c.o -o cmTC_20ccc 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a18d8/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_a18d8.dir/build.make CMakeFiles/cmTC_a18d8.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a18d8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_a18d8.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a18d8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a18d8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_a18d8.dir/CheckFunctionExists.c.o -o cmTC_a18d8 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2a5c8/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_2a5c8.dir/build.make CMakeFiles/cmTC_2a5c8.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2a5c8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_2a5c8.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2a5c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a5c8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_2a5c8.dir/CheckFunctionExists.c.o -o cmTC_2a5c8 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_389e5/fast && gmake[1]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_389e5.dir/build.make CMakeFiles/cmTC_389e5.dir/build
+gmake[2]: Entering directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_389e5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_389e5.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_389e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_389e5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_389e5.dir/CheckFunctionExists.c.o -o cmTC_389e5  -lICE 
+gmake[2]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/theanh/ros2_ws1/src/ros2_qt1_demo/build/CMakeFiles/CMakeTmp'
+
+
+

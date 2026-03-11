@@ -1,0 +1,720 @@
+[1.538s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[1.538s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ba0979634c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ba097962f80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ba097962f80>>)
+[6.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[6.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[6.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[6.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[6.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[6.462s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[6.462s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/theanh/ros2_ws1'
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[6.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[6.523s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[6.523s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[6.524s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extensions ['ignore', 'ignore_ament_install']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extension 'ignore'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extension 'ignore_ament_install'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extensions ['colcon_pkg']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extension 'colcon_pkg'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extensions ['colcon_meta']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extension 'colcon_meta'
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extensions ['ros']
+[6.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_one_motor_pkg_ex) by extension 'ros'
+[6.562s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control_one_motor_pkg_ex' with type 'ros.ament_cmake' and name 'control_one_motor_pkg_ex'
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extensions ['ignore', 'ignore_ament_install']
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'ignore'
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'ignore_ament_install'
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extensions ['colcon_pkg']
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'colcon_pkg'
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extensions ['colcon_meta']
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'colcon_meta'
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extensions ['ros']
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'ros'
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extensions ['cmake', 'python']
+[6.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'cmake'
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'python'
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extensions ['python_setup_py']
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2) by extension 'python_setup_py'
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extensions ['ignore', 'ignore_ament_install']
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extension 'ignore'
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extension 'ignore_ament_install'
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extensions ['colcon_pkg']
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extension 'colcon_pkg'
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extensions ['colcon_meta']
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extension 'colcon_meta'
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extensions ['ros']
+[6.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver) by extension 'ros'
+[6.583s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ethercat_driver_ros2/ethercat_driver' with type 'ros.ament_cmake' and name 'ethercat_driver'
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extensions ['ignore', 'ignore_ament_install']
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extension 'ignore'
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extension 'ignore_ament_install'
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extensions ['colcon_pkg']
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extension 'colcon_pkg'
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extensions ['colcon_meta']
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extension 'colcon_meta'
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extensions ['ros']
+[6.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_driver_ros2) by extension 'ros'
+[6.592s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ethercat_driver_ros2/ethercat_driver_ros2' with type 'ros.ament_cmake' and name 'ethercat_driver_ros2'
+[6.592s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extensions ['ignore', 'ignore_ament_install']
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'ignore'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'ignore_ament_install'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extensions ['colcon_pkg']
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'colcon_pkg'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extensions ['colcon_meta']
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'colcon_meta'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extensions ['ros']
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'ros'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extensions ['cmake', 'python']
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'cmake'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'python'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extensions ['python_setup_py']
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins) by extension 'python_setup_py'
+[6.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extensions ['ignore', 'ignore_ament_install']
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extension 'ignore'
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extension 'ignore_ament_install'
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extensions ['colcon_pkg']
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extension 'colcon_pkg'
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extensions ['colcon_meta']
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extension 'colcon_meta'
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extensions ['ros']
+[6.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive) by extension 'ros'
+[6.595s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive' with type 'ros.ament_cmake' and name 'ethercat_generic_cia402_drive'
+[6.595s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extensions ['ignore', 'ignore_ament_install']
+[6.595s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extension 'ignore'
+[6.595s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extension 'ignore_ament_install'
+[6.595s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extensions ['colcon_pkg']
+[6.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extension 'colcon_pkg'
+[6.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extensions ['colcon_meta']
+[6.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extension 'colcon_meta'
+[6.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extensions ['ros']
+[6.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave) by extension 'ros'
+[6.597s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave' with type 'ros.ament_cmake' and name 'ethercat_generic_slave'
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extensions ['ignore', 'ignore_ament_install']
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extension 'ignore'
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extension 'ignore_ament_install'
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extensions ['colcon_pkg']
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extension 'colcon_pkg'
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extensions ['colcon_meta']
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extension 'colcon_meta'
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extensions ['ros']
+[6.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_interface) by extension 'ros'
+[6.598s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ethercat_driver_ros2/ethercat_interface' with type 'ros.ament_cmake' and name 'ethercat_interface'
+[6.598s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extensions ['ignore', 'ignore_ament_install']
+[6.598s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extension 'ignore'
+[6.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extension 'ignore_ament_install'
+[6.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extensions ['colcon_pkg']
+[6.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extension 'colcon_pkg'
+[6.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extensions ['colcon_meta']
+[6.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extension 'colcon_meta'
+[6.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extensions ['ros']
+[6.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_manager) by extension 'ros'
+[6.600s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ethercat_driver_ros2/ethercat_manager' with type 'ros.ament_cmake' and name 'ethercat_manager'
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extensions ['ignore', 'ignore_ament_install']
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extension 'ignore'
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extension 'ignore_ament_install'
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extensions ['colcon_pkg']
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extension 'colcon_pkg'
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extensions ['colcon_meta']
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extension 'colcon_meta'
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extensions ['ros']
+[6.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/ethercat_driver_ros2/ethercat_msgs) by extension 'ros'
+[6.601s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ethercat_driver_ros2/ethercat_msgs' with type 'ros.ament_cmake' and name 'ethercat_msgs'
+[6.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extensions ['ignore', 'ignore_ament_install']
+[6.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extension 'ignore'
+[6.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extension 'ignore_ament_install'
+[6.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extensions ['colcon_pkg']
+[6.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extension 'colcon_pkg'
+[6.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extensions ['colcon_meta']
+[6.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extension 'colcon_meta'
+[6.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extensions ['ros']
+[6.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_qt1_demo) by extension 'ros'
+[6.615s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_qt1_demo' with type 'ros.ament_cmake' and name 'ros2_qt1_demo'
+[6.615s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[6.615s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[6.615s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[6.615s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[6.615s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[6.772s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[6.772s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[6.868s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 13 installed packages in /home/theanh/can_example_ws/install
+[6.869s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/theanh/agv_test_ws/install
+[6.869s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/theanh/mobile_rb_ws/install
+[6.870s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/theanh/gui_rviz2_qt5/install
+[6.872s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 450 installed packages in /opt/ros/humble
+[6.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'cmake_args' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'cmake_target' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'cmake_clean_cache' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'cmake_clean_first' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'cmake_force_configure' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'ament_cmake_args' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'catkin_cmake_args' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'control_one_motor_pkg_ex' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.621s] DEBUG:colcon.colcon_core.verb:Building package 'control_one_motor_pkg_ex' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex', 'symlink_install': True, 'test_result_base': None}
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'cmake_args' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'cmake_target' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'cmake_clean_first' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'cmake_force_configure' from command line to 'False'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'ament_cmake_args' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[7.621s] Level 5:colcon.colcon_core.verb:set package 'ethercat_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.621s] DEBUG:colcon.colcon_core.verb:Building package 'ethercat_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ethercat_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ethercat_interface', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_interface', 'symlink_install': True, 'test_result_base': None}
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'cmake_args' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'cmake_target' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.622s] DEBUG:colcon.colcon_core.verb:Building package 'ethercat_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ethercat_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ethercat_msgs', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_msgs', 'symlink_install': True, 'test_result_base': None}
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'cmake_args' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'cmake_target' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'cmake_clean_cache' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'cmake_clean_first' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'cmake_force_configure' from command line to 'False'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'ament_cmake_args' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'catkin_cmake_args' from command line to 'None'
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ros2_qt1_demo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.622s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_qt1_demo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ros2_qt1_demo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ros2_qt1_demo', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ros2_qt1_demo', 'symlink_install': True, 'test_result_base': None}
+[7.622s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'cmake_target' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'cmake_clean_first' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'cmake_force_configure' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'ament_cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.623s] DEBUG:colcon.colcon_core.verb:Building package 'ethercat_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ethercat_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ethercat_driver', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_driver', 'symlink_install': True, 'test_result_base': None}
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'cmake_target' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'cmake_clean_cache' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'cmake_clean_first' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'cmake_force_configure' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'ament_cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'catkin_cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_slave' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.623s] DEBUG:colcon.colcon_core.verb:Building package 'ethercat_generic_slave' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ethercat_generic_slave', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ethercat_generic_slave', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave', 'symlink_install': True, 'test_result_base': None}
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'cmake_target' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'cmake_clean_first' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'cmake_force_configure' from command line to 'False'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'ament_cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[7.623s] Level 5:colcon.colcon_core.verb:set package 'ethercat_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.623s] DEBUG:colcon.colcon_core.verb:Building package 'ethercat_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ethercat_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ethercat_manager', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_manager', 'symlink_install': True, 'test_result_base': None}
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'cmake_args' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'cmake_target' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_driver_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.624s] DEBUG:colcon.colcon_core.verb:Building package 'ethercat_driver_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ethercat_driver_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ethercat_driver_ros2', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_driver_ros2', 'symlink_install': True, 'test_result_base': None}
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'cmake_args' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'cmake_target' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'cmake_clean_cache' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'cmake_clean_first' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'cmake_force_configure' from command line to 'False'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'ament_cmake_args' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'catkin_cmake_args' from command line to 'None'
+[7.624s] Level 5:colcon.colcon_core.verb:set package 'ethercat_generic_cia402_drive' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.624s] DEBUG:colcon.colcon_core.verb:Building package 'ethercat_generic_cia402_drive' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive', 'merge_install': False, 'path': '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive', 'symlink_install': True, 'test_result_base': None}
+[7.624s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[7.625s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[7.625s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_interface' with build type 'ament_cmake'
+[7.625s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_interface'
+[7.631s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[7.631s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.631s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.672s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_msgs' with build type 'ament_cmake'
+[7.672s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_msgs'
+[7.673s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.673s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.679s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex' with build type 'ament_cmake'
+[7.679s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex'
+[7.680s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.680s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.686s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ros2_qt1_demo' with build type 'ament_cmake'
+[7.686s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ros2_qt1_demo'
+[7.687s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.687s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.739s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_interface -- -j16 -l16
+[7.786s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_msgs -- -j16 -l16
+[7.811s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex -- -j16 -l16
+[7.833s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ros2_qt1_demo -- -j16 -l16
+[8.171s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex -- -j16 -l16
+[8.195s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex
+[8.431s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_one_motor_pkg_ex)
+[8.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/control_one_motor_pkg_ex
+[8.583s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex' for CMake module files
+[8.583s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex' for CMake config files
+[8.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_one_motor_pkg_ex', 'cmake_prefix_path')
+[8.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/hook/cmake_prefix_path.ps1'
+[8.603s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/hook/cmake_prefix_path.dsv'
+[8.604s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/hook/cmake_prefix_path.sh'
+[8.605s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/bin'
+[8.605s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/lib/pkgconfig/control_one_motor_pkg_ex.pc'
+[8.605s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/lib/python3.10/site-packages'
+[8.606s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/bin'
+[8.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.ps1'
+[8.681s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.dsv'
+[8.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.sh'
+[8.880s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.bash'
+[8.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.zsh'
+[8.973s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/colcon-core/packages/control_one_motor_pkg_ex)
+[8.974s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_one_motor_pkg_ex)
+[8.974s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex' for CMake module files
+[8.974s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex' for CMake config files
+[8.975s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_one_motor_pkg_ex', 'cmake_prefix_path')
+[8.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/hook/cmake_prefix_path.ps1'
+[8.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/hook/cmake_prefix_path.dsv'
+[8.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/hook/cmake_prefix_path.sh'
+[8.976s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/bin'
+[8.976s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/lib/pkgconfig/control_one_motor_pkg_ex.pc'
+[8.977s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/lib/python3.10/site-packages'
+[8.977s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/bin'
+[8.977s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.ps1'
+[8.977s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.dsv'
+[8.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.sh'
+[8.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.bash'
+[8.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.zsh'
+[8.979s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/colcon-core/packages/control_one_motor_pkg_ex)
+[8.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_interface -- -j16 -l16
+[8.981s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_interface
+[8.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_msgs -- -j16 -l16
+[9.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_msgs
+[9.102s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_interface)
+[9.102s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface' for CMake module files
+[9.103s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_interface
+[9.103s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface' for CMake config files
+[9.103s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_interface', 'cmake_prefix_path')
+[9.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/cmake_prefix_path.ps1'
+[9.104s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/cmake_prefix_path.dsv'
+[9.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/cmake_prefix_path.sh'
+[9.104s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/lib'
+[9.105s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_interface', 'ld_library_path_lib')
+[9.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/ld_library_path_lib.ps1'
+[9.105s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/ld_library_path_lib.dsv'
+[9.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/ld_library_path_lib.sh'
+[9.106s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/bin'
+[9.106s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/lib/pkgconfig/ethercat_interface.pc'
+[9.106s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/lib/python3.10/site-packages'
+[9.106s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/bin'
+[9.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.ps1'
+[9.107s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.dsv'
+[9.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.sh'
+[9.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.bash'
+[9.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.zsh'
+[9.108s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_interface/share/colcon-core/packages/ethercat_interface)
+[9.108s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_interface)
+[9.108s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface' for CMake module files
+[9.109s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface' for CMake config files
+[9.109s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_interface', 'cmake_prefix_path')
+[9.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/cmake_prefix_path.ps1'
+[9.109s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/cmake_prefix_path.dsv'
+[9.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/cmake_prefix_path.sh'
+[9.110s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/lib'
+[9.110s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_interface', 'ld_library_path_lib')
+[9.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/ld_library_path_lib.ps1'
+[9.110s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/ld_library_path_lib.dsv'
+[9.111s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/hook/ld_library_path_lib.sh'
+[9.111s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/bin'
+[9.111s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/lib/pkgconfig/ethercat_interface.pc'
+[9.111s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/lib/python3.10/site-packages'
+[9.111s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_interface/bin'
+[9.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.ps1'
+[9.112s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.dsv'
+[9.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.sh'
+[9.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.bash'
+[9.113s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.zsh'
+[9.113s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_interface/share/colcon-core/packages/ethercat_interface)
+[9.113s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_driver' with build type 'ament_cmake'
+[9.114s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_driver'
+[9.114s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.114s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.119s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave' with build type 'ament_cmake'
+[9.119s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave'
+[9.119s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.119s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ros2_qt1_demo -- -j16 -l16
+[9.161s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ros2_qt1_demo
+[9.197s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_msgs)
+[9.197s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs' for CMake module files
+[9.198s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_msgs
+[9.198s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs' for CMake config files
+[9.199s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_msgs', 'cmake_prefix_path')
+[9.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/cmake_prefix_path.ps1'
+[9.200s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/cmake_prefix_path.dsv'
+[9.200s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/cmake_prefix_path.sh'
+[9.200s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/lib'
+[9.201s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_msgs', 'ld_library_path_lib')
+[9.201s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/ld_library_path_lib.ps1'
+[9.202s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/ld_library_path_lib.dsv'
+[9.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/ld_library_path_lib.sh'
+[9.202s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/bin'
+[9.202s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/lib/pkgconfig/ethercat_msgs.pc'
+[9.202s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/lib/python3.10/site-packages'
+[9.203s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/bin'
+[9.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.ps1'
+[9.203s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.dsv'
+[9.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.sh'
+[9.204s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.bash'
+[9.204s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.zsh'
+[9.204s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_msgs/share/colcon-core/packages/ethercat_msgs)
+[9.205s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_msgs)
+[9.205s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs' for CMake module files
+[9.205s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs' for CMake config files
+[9.206s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_msgs', 'cmake_prefix_path')
+[9.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/cmake_prefix_path.ps1'
+[9.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/cmake_prefix_path.dsv'
+[9.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/cmake_prefix_path.sh'
+[9.207s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/lib'
+[9.207s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_msgs', 'ld_library_path_lib')
+[9.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/ld_library_path_lib.ps1'
+[9.208s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/ld_library_path_lib.dsv'
+[9.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/hook/ld_library_path_lib.sh'
+[9.208s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/bin'
+[9.208s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/lib/pkgconfig/ethercat_msgs.pc'
+[9.208s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/lib/python3.10/site-packages'
+[9.209s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_msgs/bin'
+[9.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.ps1'
+[9.209s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.dsv'
+[9.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.sh'
+[9.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.bash'
+[9.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.zsh'
+[9.210s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_msgs/share/colcon-core/packages/ethercat_msgs)
+[9.211s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_manager' with build type 'ament_cmake'
+[9.211s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_manager'
+[9.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_driver': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_driver -- -j16 -l16
+[9.256s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_qt1_demo)
+[9.256s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo' for CMake module files
+[9.257s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_generic_slave -- -j16 -l16
+[9.257s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ros2_qt1_demo
+[9.257s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo' for CMake config files
+[9.257s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_qt1_demo', 'cmake_prefix_path')
+[9.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/hook/cmake_prefix_path.ps1'
+[9.258s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/hook/cmake_prefix_path.dsv'
+[9.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/hook/cmake_prefix_path.sh'
+[9.259s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/lib'
+[9.259s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/bin'
+[9.259s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/lib/pkgconfig/ros2_qt1_demo.pc'
+[9.259s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/lib/python3.10/site-packages'
+[9.259s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/bin'
+[9.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.ps1'
+[9.260s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.dsv'
+[9.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.sh'
+[9.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.bash'
+[9.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.zsh'
+[9.261s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/colcon-core/packages/ros2_qt1_demo)
+[9.261s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_qt1_demo)
+[9.261s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo' for CMake module files
+[9.262s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo' for CMake config files
+[9.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_qt1_demo', 'cmake_prefix_path')
+[9.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/hook/cmake_prefix_path.ps1'
+[9.262s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/hook/cmake_prefix_path.dsv'
+[9.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/hook/cmake_prefix_path.sh'
+[9.263s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/lib'
+[9.263s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/bin'
+[9.263s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/lib/pkgconfig/ros2_qt1_demo.pc'
+[9.264s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/lib/python3.10/site-packages'
+[9.264s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ros2_qt1_demo/bin'
+[9.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.ps1'
+[9.264s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.dsv'
+[9.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.sh'
+[9.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.bash'
+[9.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.zsh'
+[9.266s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ros2_qt1_demo/share/colcon-core/packages/ros2_qt1_demo)
+[9.282s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_manager': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_manager -- -j16 -l16
+[9.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_manager' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_manager -- -j16 -l16
+[9.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_manager': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_manager
+[9.493s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_manager)
+[9.493s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager' for CMake module files
+[9.494s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_manager' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_manager
+[9.494s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager' for CMake config files
+[9.495s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_manager', 'cmake_prefix_path')
+[9.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/hook/cmake_prefix_path.ps1'
+[9.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/hook/cmake_prefix_path.dsv'
+[9.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/hook/cmake_prefix_path.sh'
+[9.496s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/lib'
+[9.496s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/bin'
+[9.496s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/lib/pkgconfig/ethercat_manager.pc'
+[9.496s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/lib/python3.10/site-packages'
+[9.496s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/bin'
+[9.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.ps1'
+[9.497s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.dsv'
+[9.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.sh'
+[9.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.bash'
+[9.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.zsh'
+[9.498s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_manager/share/colcon-core/packages/ethercat_manager)
+[9.498s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_manager)
+[9.499s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager' for CMake module files
+[9.499s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager' for CMake config files
+[9.499s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_manager', 'cmake_prefix_path')
+[9.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/hook/cmake_prefix_path.ps1'
+[9.500s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/hook/cmake_prefix_path.dsv'
+[9.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/hook/cmake_prefix_path.sh'
+[9.500s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/lib'
+[9.501s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/bin'
+[9.501s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/lib/pkgconfig/ethercat_manager.pc'
+[9.501s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/lib/python3.10/site-packages'
+[9.501s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_manager/bin'
+[9.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.ps1'
+[9.501s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.dsv'
+[9.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.sh'
+[9.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.bash'
+[9.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_manager/share/ethercat_manager/package.zsh'
+[9.503s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_manager/share/colcon-core/packages/ethercat_manager)
+[9.522s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_generic_slave -- -j16 -l16
+[9.524s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_generic_slave
+[9.529s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_driver' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_driver -- -j16 -l16
+[9.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_driver': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_driver
+[9.595s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_driver)
+[9.596s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver' for CMake module files
+[9.596s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_driver' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_driver
+[9.596s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver' for CMake config files
+[9.597s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_driver', 'cmake_prefix_path')
+[9.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/cmake_prefix_path.ps1'
+[9.597s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/cmake_prefix_path.dsv'
+[9.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/cmake_prefix_path.sh'
+[9.598s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/lib'
+[9.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_driver', 'ld_library_path_lib')
+[9.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/ld_library_path_lib.ps1'
+[9.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/ld_library_path_lib.dsv'
+[9.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/ld_library_path_lib.sh'
+[9.599s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/bin'
+[9.599s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/lib/pkgconfig/ethercat_driver.pc'
+[9.599s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/lib/python3.10/site-packages'
+[9.599s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/bin'
+[9.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.ps1'
+[9.600s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.dsv'
+[9.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.sh'
+[9.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.bash'
+[9.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.zsh'
+[9.601s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_driver/share/colcon-core/packages/ethercat_driver)
+[9.601s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_driver)
+[9.602s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver' for CMake module files
+[9.602s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver' for CMake config files
+[9.602s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_driver', 'cmake_prefix_path')
+[9.602s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/cmake_prefix_path.ps1'
+[9.603s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/cmake_prefix_path.dsv'
+[9.603s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/cmake_prefix_path.sh'
+[9.603s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/lib'
+[9.603s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_driver', 'ld_library_path_lib')
+[9.603s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/ld_library_path_lib.ps1'
+[9.604s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/ld_library_path_lib.dsv'
+[9.604s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/hook/ld_library_path_lib.sh'
+[9.604s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/bin'
+[9.604s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/lib/pkgconfig/ethercat_driver.pc'
+[9.604s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/lib/python3.10/site-packages'
+[9.605s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver/bin'
+[9.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.ps1'
+[9.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.dsv'
+[9.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.sh'
+[9.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.bash'
+[9.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver/share/ethercat_driver/package.zsh'
+[9.606s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_driver/share/colcon-core/packages/ethercat_driver)
+[9.607s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_driver_ros2' with build type 'ament_cmake'
+[9.607s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_driver_ros2'
+[9.607s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.607s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.612s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_generic_slave)
+[9.612s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave' for CMake module files
+[9.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_generic_slave
+[9.613s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave' for CMake config files
+[9.613s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_slave', 'cmake_prefix_path')
+[9.613s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/cmake_prefix_path.ps1'
+[9.614s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/cmake_prefix_path.dsv'
+[9.614s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/cmake_prefix_path.sh'
+[9.614s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib'
+[9.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_slave', 'ld_library_path_lib')
+[9.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/ld_library_path_lib.ps1'
+[9.615s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/ld_library_path_lib.dsv'
+[9.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/ld_library_path_lib.sh'
+[9.615s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/bin'
+[9.615s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib/pkgconfig/ethercat_generic_slave.pc'
+[9.615s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib/python3.10/site-packages'
+[9.616s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/bin'
+[9.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.ps1'
+[9.616s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.dsv'
+[9.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.sh'
+[9.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.bash'
+[9.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.zsh'
+[9.617s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/colcon-core/packages/ethercat_generic_slave)
+[9.618s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_generic_slave)
+[9.618s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave' for CMake module files
+[9.618s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave' for CMake config files
+[9.619s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_slave', 'cmake_prefix_path')
+[9.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/cmake_prefix_path.ps1'
+[9.619s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/cmake_prefix_path.dsv'
+[9.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/cmake_prefix_path.sh'
+[9.620s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib'
+[9.620s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_slave', 'ld_library_path_lib')
+[9.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/ld_library_path_lib.ps1'
+[9.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/ld_library_path_lib.dsv'
+[9.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/hook/ld_library_path_lib.sh'
+[9.622s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/bin'
+[9.622s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib/pkgconfig/ethercat_generic_slave.pc'
+[9.622s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib/python3.10/site-packages'
+[9.623s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_slave/bin'
+[9.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.ps1'
+[9.623s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.dsv'
+[9.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.sh'
+[9.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.bash'
+[9.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.zsh'
+[9.625s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_generic_slave/share/colcon-core/packages/ethercat_generic_slave)
+[9.625s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive' with build type 'ament_cmake'
+[9.625s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_cia402_drive'
+[9.626s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.626s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_driver_ros2': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_driver_ros2 -- -j16 -l16
+[9.677s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive -- -j16 -l16
+[9.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_driver_ros2' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_driver_ros2 -- -j16 -l16
+[9.706s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_driver_ros2': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_driver_ros2
+[9.777s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_driver_ros2)
+[9.777s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2' for CMake module files
+[9.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_driver_ros2' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_driver_ros2
+[9.778s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2' for CMake config files
+[9.778s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_driver_ros2', 'cmake_prefix_path')
+[9.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/hook/cmake_prefix_path.ps1'
+[9.779s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/hook/cmake_prefix_path.dsv'
+[9.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/hook/cmake_prefix_path.sh'
+[9.780s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/bin'
+[9.780s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/lib/pkgconfig/ethercat_driver_ros2.pc'
+[9.780s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/lib/python3.10/site-packages'
+[9.780s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/bin'
+[9.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.ps1'
+[9.781s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.dsv'
+[9.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.sh'
+[9.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.bash'
+[9.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.zsh'
+[9.782s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/colcon-core/packages/ethercat_driver_ros2)
+[9.783s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_driver_ros2)
+[9.783s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2' for CMake module files
+[9.783s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2' for CMake config files
+[9.783s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_driver_ros2', 'cmake_prefix_path')
+[9.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/hook/cmake_prefix_path.ps1'
+[9.784s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/hook/cmake_prefix_path.dsv'
+[9.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/hook/cmake_prefix_path.sh'
+[9.784s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/bin'
+[9.784s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/lib/pkgconfig/ethercat_driver_ros2.pc'
+[9.784s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/lib/python3.10/site-packages'
+[9.785s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/bin'
+[9.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.ps1'
+[9.785s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.dsv'
+[9.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.sh'
+[9.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.bash'
+[9.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/ethercat_driver_ros2/package.zsh'
+[9.787s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_driver_ros2/share/colcon-core/packages/ethercat_driver_ros2)
+[9.863s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive -- -j16 -l16
+[9.864s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive
+[9.940s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_generic_cia402_drive)
+[9.941s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive' for CMake module files
+[9.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_generic_cia402_drive
+[9.941s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive' for CMake config files
+[9.942s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_cia402_drive', 'cmake_prefix_path')
+[9.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/cmake_prefix_path.ps1'
+[9.942s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/cmake_prefix_path.dsv'
+[9.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/cmake_prefix_path.sh'
+[9.943s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib'
+[9.943s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_cia402_drive', 'ld_library_path_lib')
+[9.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/ld_library_path_lib.ps1'
+[9.943s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/ld_library_path_lib.dsv'
+[9.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/ld_library_path_lib.sh'
+[9.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/bin'
+[9.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib/pkgconfig/ethercat_generic_cia402_drive.pc'
+[9.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib/python3.10/site-packages'
+[9.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/bin'
+[9.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.ps1'
+[9.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.dsv'
+[9.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.sh'
+[9.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.bash'
+[9.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.zsh'
+[9.946s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/colcon-core/packages/ethercat_generic_cia402_drive)
+[9.946s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ethercat_generic_cia402_drive)
+[9.946s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive' for CMake module files
+[9.947s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive' for CMake config files
+[9.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_cia402_drive', 'cmake_prefix_path')
+[9.947s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/cmake_prefix_path.ps1'
+[9.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/cmake_prefix_path.dsv'
+[9.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/cmake_prefix_path.sh'
+[9.948s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib'
+[9.948s] Level 1:colcon.colcon_core.shell:create_environment_hook('ethercat_generic_cia402_drive', 'ld_library_path_lib')
+[9.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/ld_library_path_lib.ps1'
+[9.948s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/ld_library_path_lib.dsv'
+[9.949s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/hook/ld_library_path_lib.sh'
+[9.949s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/bin'
+[9.949s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib/pkgconfig/ethercat_generic_cia402_drive.pc'
+[9.949s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib/python3.10/site-packages'
+[9.949s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/bin'
+[9.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.ps1'
+[9.950s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.dsv'
+[9.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.sh'
+[9.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.bash'
+[9.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/ethercat_generic_cia402_drive/package.zsh'
+[9.951s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/share/colcon-core/packages/ethercat_generic_cia402_drive)
+[9.951s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.952s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.952s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.952s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.994s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.994s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.994s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.005s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.006s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/ros2_ws1/install/local_setup.ps1'
+[10.007s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/theanh/ros2_ws1/install/_local_setup_util_ps1.py'
+[10.009s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/ros2_ws1/install/setup.ps1'
+[10.012s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/ros2_ws1/install/local_setup.sh'
+[10.012s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/theanh/ros2_ws1/install/_local_setup_util_sh.py'
+[10.013s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/ros2_ws1/install/setup.sh'
+[10.015s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/ros2_ws1/install/local_setup.bash'
+[10.016s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/ros2_ws1/install/setup.bash'
+[10.018s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/ros2_ws1/install/local_setup.zsh'
+[10.040s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/ros2_ws1/install/setup.zsh'
