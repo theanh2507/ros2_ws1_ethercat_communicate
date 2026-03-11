@@ -8,7 +8,8 @@
 #include <QMainWindow>
 #include <QDebug>
 #include <QProcess>
-
+#include "ros2_worker.h"
+#include <QThread>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,7 +26,8 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    // rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pubVel;
+    ROS2Worker *worker;
+    QThread *rosThread;
 
 
     QProcess *startServiceEtherCATProcess = nullptr;

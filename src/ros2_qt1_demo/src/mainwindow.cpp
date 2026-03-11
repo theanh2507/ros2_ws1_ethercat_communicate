@@ -9,6 +9,15 @@ MainWindow::MainWindow(QWidget *parent)
     startServiceEtherCAT();
     // modeOfOperation(9); // Setting mode of operation to Cyclic Synchronous Position (CSV)
 
+    // Khởi tạo ROS 2
+    rclcpp::init(0, nullptr);
+    worker = new ROS2Worker();
+    rosThread = new QThread(this);
+    
+    worker->moveToThread(rosThread);
+    connect(rosThread, &QThread::started, worker, &ROS2Worker::spin);
+    rosThread->start();
+
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::onButtonClicked);
     connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::enableMotor);
     connect(ui->pushButton_5, &QPushButton::clicked, this, &MainWindow::disableMotor);
@@ -21,12 +30,15 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_4, &QPushButton::released, this, &MainWindow::stopMotor);
 
 
-    // change mod eof operation
+    // change mode of operation
     connect(ui->pushButton_8, &QPushButton::clicked, this, [this](){ modeOfOperation(9); }); // Cyclic Synchronous Position (CSV)
+    connect(ui->pushButton_7, &QPushButton::clicked, this, [this](){ modeOfOperation(8); }); // Profile Position Mode
 }
 
 MainWindow::~MainWindow()
 {
+    rosThread->quit();
+    rclcpp::shutdown();
     delete ui;
 }
 
@@ -142,19 +154,33 @@ void MainWindow::resetFaultError()
 
 void MainWindow::modeOfOperation(uint8_t mode)
 {
+
+    QString wsPath = "/home/theanh/ros2_ws1";
+    QString program = "/bin/bash";
+    QString activateController;
+    QString deactivateController;
+
     if(!modeOfOperationProcess) {
         modeOfOperationProcess = new QProcess(this);
     }
 
-    QString wsPath = "/home/theanh/ros2_ws1";
-    QString program = "/bin/bash";
+    if (mode == 9) { // CSV - Velocity
+        activateController = "velocity_controller";
+        deactivateController = "trajectory_controller";
+        qDebug() << "Switching to: Velocity Mode (CSV)";
+    } else if (mode == 8) { // Profile Position
+        activateController = "trajectory_controller";
+        deactivateController = "velocity_controller";
+        qDebug() << "Switching to: Position Mode (PP)";
+    }
 
     QString command = QString(
         "source /opt/ros/humble/setup.bash && "
         "source %1/install/setup.bash && "
         "ros2 service call /ethercat_manager/set_sdo ethercat_msgs/srv/SetSdo "
-        "\"{master_id: 0, slave_position: 0, sdo_index: 0x6060, sdo_subindex: 0, sdo_data_type: 'int8', sdo_value: '%2'}\""
-    ).arg(wsPath).arg(mode);
+        "\"{master_id: 0, slave_position: 0, sdo_index: 0x6060, sdo_subindex: 0, sdo_data_type: 'int8', sdo_value: '%2'}\"&&"
+        "ros2 control switch_controllers --activate %3 --deactivate %4 --switch-timeout 5.0"
+    ).arg(wsPath).arg(mode).arg(activateController).arg(deactivateController);
 
     QStringList arguments;
     arguments << "-c" << command;
@@ -165,55 +191,69 @@ void MainWindow::modeOfOperation(uint8_t mode)
 }
 
 
-void MainWindow::jogPDirection()
-{
-    QString velocityStr = ui->lineEdit->text();
+void MainWindow::jogPDirection() {
+    double v = ui->lineEdit->text().toDouble();
+    worker->publishVelocity(v);
+}
 
-    if(velocityStr.isEmpty()) velocityStr = "0.0";
+void MainWindow::jogNDirection() {
+    double v = ui->lineEdit->text().toDouble();
+    worker->publishVelocity(-v);
+}
 
-    qDebug() << "Jogging Positive with velocity:" << velocityStr;
+void MainWindow::stopMotor() {
+    worker->publishVelocity(0.0);
+}
 
-    QProcess *jogProcess = new QProcess(this);
+
+// void MainWindow::jogPDirection()
+// {
+//     QString velocityStr = ui->lineEdit->text();
+
+//     if(velocityStr.isEmpty()) velocityStr = "0.0";
+
+//     qDebug() << "Jogging Positive with velocity:" << velocityStr;
+
+//     QProcess *jogProcess = new QProcess(this);
     
-    QString command = QString(
-        // "source /opt/ros/humble/setup.bash && "
-        // "source /home/theanh/ros2_ws1/install/setup.bash && "
-        "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [%1]}\""
-    ).arg(velocityStr);
+//     QString command = QString(
+//         // "source /opt/ros/humble/setup.bash && "
+//         // "source /home/theanh/ros2_ws1/install/setup.bash && "
+//         "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [%1]}\""
+//     ).arg(velocityStr);
 
-    jogProcess->start("bash", QStringList() << "-c" << command);
+//     jogProcess->start("bash", QStringList() << "-c" << command);
 
-    // connect(jogProcess, &QProcess::finished, jogProcess, &QProcess::deleteLater);
-}
+//     // connect(jogProcess, &QProcess::finished, jogProcess, &QProcess::deleteLater);
+// }
 
-void MainWindow::jogNDirection()
-{
-    QString velocityStr = ui->lineEdit->text();
-    if(velocityStr.isEmpty()) velocityStr = "0.0";
+// void MainWindow::jogNDirection()
+// {
+//     QString velocityStr = ui->lineEdit->text();
+//     if(velocityStr.isEmpty()) velocityStr = "0.0";
 
-    double v = velocityStr.toDouble();
-    QString negativeVelocity = QString::number(-v);
+//     double v = velocityStr.toDouble();
+//     QString negativeVelocity = QString::number(-v);
 
-    qDebug() << "Jogging Negative with velocity:" << negativeVelocity;
+//     qDebug() << "Jogging Negative with velocity:" << negativeVelocity;
 
-    QProcess *jogProcess = new QProcess(this);
-    QString command = QString(
-        // "source /opt/ros/humble/setup.bash && "
-        // "source /home/theanh/ros2_ws1/install/setup.bash && "
-        "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [%1]}\""
-    ).arg(negativeVelocity);
+//     QProcess *jogProcess = new QProcess(this);
+//     QString command = QString(
+//         "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [%1]}\""
+//     ).arg(negativeVelocity);
 
-    jogProcess->start("bash", QStringList() << "-c" << command);
-    // connect(jogProcess, &QProcess::finished, jogProcess, &QProcess::deleteLater);
-}
+//     jogProcess->start("bash", QStringList() << "-c" << command);
+//     // connect(jogProcess, &QProcess::finished, jogProcess, &QProcess::deleteLater);
+// }
 
-void MainWindow::stopMotor()
-{
-    qDebug() << "Button released. Stopping motor...";
+// void MainWindow::stopMotor()
+// {
+//     qDebug() << "Button released. Stopping motor...";
     
-    QProcess *stopProcess = new QProcess(this);
-    QString command = "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [0.0]}\"";
+//     QProcess *stopProcess = new QProcess(this);
+//     QString command = "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [0.0]}\"";
 
-    stopProcess->start("bash", QStringList() << "-c" << command);
-    // connect(stopProcess, &QProcess::finished, stopProcess, &QProcess::deleteLater);
-}
+//     stopProcess->start("bash", QStringList() << "-c" << command);
+//     // connect(stopProcess, &QProcess::finished, stopProcess, &QProcess::deleteLater);
+// }
+

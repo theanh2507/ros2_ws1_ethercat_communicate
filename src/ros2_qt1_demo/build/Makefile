@@ -295,6 +295,30 @@ src/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
+src/ros2_worker.o: src/ros2_worker.cpp.o
+.PHONY : src/ros2_worker.o
+
+# target to build an object file
+src/ros2_worker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o
+.PHONY : src/ros2_worker.cpp.o
+
+src/ros2_worker.i: src/ros2_worker.cpp.i
+.PHONY : src/ros2_worker.i
+
+# target to preprocess a source file
+src/ros2_worker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.i
+.PHONY : src/ros2_worker.cpp.i
+
+src/ros2_worker.s: src/ros2_worker.cpp.s
+.PHONY : src/ros2_worker.s
+
+# target to generate assembly for a file
+src/ros2_worker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.s
+.PHONY : src/ros2_worker.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,6 +345,9 @@ help:
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
+	@echo "... src/ros2_worker.o"
+	@echo "... src/ros2_worker.i"
+	@echo "... src/ros2_worker.s"
 .PHONY : help
 
 

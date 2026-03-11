@@ -1037,6 +1037,12 @@
 			"MU",
 			"6YEA5652QU/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"/home/theanh/ros2_ws1/src/ros2_qt1_demo/include/ros2_worker.h",
+			"MU",
+			"6YEA5652QU/moc_ros2_worker.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -1131,6 +1137,11 @@
 		[ "/home/theanh/ros2_ws1/src/ros2_qt1_demo/src/main.cpp", "MU", null ],
 		[
 			"/home/theanh/ros2_ws1/src/ros2_qt1_demo/src/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/theanh/ros2_ws1/src/ros2_qt1_demo/src/ros2_worker.cpp",
 			"MU",
 			null
 		]

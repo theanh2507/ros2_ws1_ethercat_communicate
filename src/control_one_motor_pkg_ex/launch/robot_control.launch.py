@@ -97,7 +97,8 @@ def generate_launch_description():
             on_exit=[
                 TimerAction(
                     period=10.0,
-                    actions=[velocity_controller_spawner],
+                    actions=[velocity_controller_spawner,
+                             trajectory_controller_spawner],
                 )]
         )
     )

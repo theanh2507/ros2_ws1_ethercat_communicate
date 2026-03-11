@@ -43,6 +43,8 @@ add_executable(${PROJECT_NAME}
   ${HEADERS}
   ${UIS}
   ${RESOURCES}
+  src/ros2_worker.cpp   # Phải có file .cpp này
+  include/ros2_worker.h
 )
 
 ament_target_dependencies(${PROJECT_NAME}

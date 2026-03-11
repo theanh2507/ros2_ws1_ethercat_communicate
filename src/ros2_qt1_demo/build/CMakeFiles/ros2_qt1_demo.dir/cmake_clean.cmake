@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.o.d"
   "CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o"
   "CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o.d"
+  "CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o"
+  "CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o.d"
   "ros2_qt1_demo"
   "ros2_qt1_demo.pdb"
 )
