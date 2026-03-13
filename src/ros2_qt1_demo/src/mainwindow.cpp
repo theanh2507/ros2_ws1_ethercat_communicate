@@ -19,20 +19,42 @@ MainWindow::MainWindow(QWidget *parent)
     rosThread->start();
 
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::onButtonClicked);
-    connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::enableMotor);
-    connect(ui->pushButton_5, &QPushButton::clicked, this, &MainWindow::disableMotor);
-    connect(ui->pushButton_6, &QPushButton::clicked, this, &MainWindow::resetFaultError);
+    // connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::enableMotor);
+    // connect(ui->pushButton_5, &QPushButton::clicked, this, &MainWindow::disableMotor);
+    // connect(ui->pushButton_6, &QPushButton::clicked, this, &MainWindow::resetFaultError);
 
+    connect(ui->pushButton_2, &QPushButton::clicked, this, [this](){ 
+        for(int slave = 0; slave < 6; slave++) {
+            enableMotor(slave);
+        }
+    });
+
+    connect(ui->pushButton_5, &QPushButton::clicked, this, [this](){ 
+        for(int slave = 0; slave < 6; slave++) {
+            disableMotor(slave);
+        }
+    });
+
+    connect(ui->pushButton_6, &QPushButton::clicked, this, [this](){ 
+        for(int slave = 0; slave < 6; slave++) {
+            resetFaultError(slave);
+        }
+    });
+
+
+    // change mode of operation
+    connect(ui->pushButton_8, &QPushButton::clicked, this, [this](){ modeOfOperation(9); }); // Cyclic Synchronous Position (CSV)
+    connect(ui->pushButton_7, &QPushButton::clicked, this, [this](){ modeOfOperation(8); }); // Profile Position Mode
+
+    // Jogging buttons
     connect(ui->pushButton_3, &QPushButton::pressed, this, &MainWindow::jogPDirection);
     connect(ui->pushButton_3, &QPushButton::released, this, &MainWindow::stopMotor);
 
     connect(ui->pushButton_4, &QPushButton::pressed, this, &MainWindow::jogNDirection);
     connect(ui->pushButton_4, &QPushButton::released, this, &MainWindow::stopMotor);
 
-
-    // change mode of operation
-    connect(ui->pushButton_8, &QPushButton::clicked, this, [this](){ modeOfOperation(9); }); // Cyclic Synchronous Position (CSV)
-    connect(ui->pushButton_7, &QPushButton::clicked, this, [this](){ modeOfOperation(8); }); // Profile Position Mode
+    // Move to position button
+    connect(ui->pushButton_9, &QPushButton::clicked, this, &MainWindow::moveToPosition);
 }
 
 MainWindow::~MainWindow()
@@ -69,7 +91,7 @@ void MainWindow::startServiceEtherCAT()
     startServiceEtherCATProcess->start(program, arguments);
 }
 
-void MainWindow::enableMotor()
+void MainWindow::enableMotor(uint8_t slave)
 {
     if(!enableMotorProcess) {
         enableMotorProcess = new QProcess(this);
@@ -81,8 +103,8 @@ void MainWindow::enableMotor()
         "source /opt/ros/humble/setup.bash && "
         "source %1/install/setup.bash && "
         "ros2 service call /ethercat_manager/set_sdo ethercat_msgs/srv/SetSdo "
-        "\"{master_id: 0, slave_position: 0, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: '15'}\""
-    ).arg(wsPath);
+        "\"{master_id: 0, slave_position: %2, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: '15'}\""
+    ).arg(wsPath).arg(slave);
 
     QStringList arguments;
     arguments << "-c" << command;
@@ -97,7 +119,7 @@ void MainWindow::enableMotor()
 }
 
 
-void MainWindow::disableMotor()
+void MainWindow::disableMotor(uint8_t slave)
 {
     if(!disableMotorProcess) {
         disableMotorProcess = new QProcess(this);
@@ -109,8 +131,8 @@ void MainWindow::disableMotor()
         "source /opt/ros/humble/setup.bash && "
         "source %1/install/setup.bash && "
         "ros2 service call /ethercat_manager/set_sdo ethercat_msgs/srv/SetSdo "
-        "\"{master_id: 0, slave_position: 0, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: '6'}\""
-    ).arg(wsPath);
+        "\"{master_id: 0, slave_position: %2, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: '6'}\""
+    ).arg(wsPath).arg(slave);
 
     QStringList arguments;
     arguments << "-c" << command;
@@ -125,7 +147,7 @@ void MainWindow::disableMotor()
 }
 
 
-void MainWindow::resetFaultError()
+void MainWindow::resetFaultError(uint8_t slave)
 {
     if(!resetFaultErrorProcess) {
         resetFaultErrorProcess = new QProcess(this);
@@ -137,8 +159,8 @@ void MainWindow::resetFaultError()
         "source /opt/ros/humble/setup.bash && "
         "source %1/install/setup.bash && "
         "ros2 service call /ethercat_manager/set_sdo ethercat_msgs/srv/SetSdo "
-        "\"{master_id: 0, slave_position: 0, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: '128'}\""
-    ).arg(wsPath);
+        "\"{master_id: 0, slave_position: %2, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: '128'}\""
+    ).arg(wsPath).arg(slave);
 
     QStringList arguments;
     arguments << "-c" << command;
@@ -192,17 +214,37 @@ void MainWindow::modeOfOperation(uint8_t mode)
 
 
 void MainWindow::jogPDirection() {
-    double v = ui->lineEdit->text().toDouble();
-    worker->publishVelocity(v);
+    double v1 = ui->lineEdit->text().toDouble();
+    double v2 = ui->lineEdit_4->text().toDouble();
+    double v3 = ui->lineEdit_5->text().toDouble();
+    double v4 = ui->lineEdit_6->text().toDouble();
+    double v5 = ui->lineEdit_7->text().toDouble();
+    double v6 = ui->lineEdit_8->text().toDouble();
+    worker->publishVelocity(v1, v2, v3, v4, v5, v6);
 }
 
 void MainWindow::jogNDirection() {
-    double v = ui->lineEdit->text().toDouble();
-    worker->publishVelocity(-v);
+    double v1 = ui->lineEdit->text().toDouble();
+    double v2 = ui->lineEdit_4->text().toDouble();
+    double v3 = ui->lineEdit_5->text().toDouble();
+    double v4 = ui->lineEdit_6->text().toDouble();
+    double v5 = ui->lineEdit_7->text().toDouble();
+    double v6 = ui->lineEdit_8->text().toDouble();
+    worker->publishVelocity(-v1, -v2, -v3, -v4, -v5, -v6);
 }
 
 void MainWindow::stopMotor() {
-    worker->publishVelocity(0.0);
+    worker->publishVelocity(0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+}
+
+void MainWindow::moveToPosition() {
+    double p1 = ui->lineEdit_2->text().toDouble();
+    double p2 = ui->lineEdit_9->text().toDouble();
+    double p3 = ui->lineEdit_10->text().toDouble();
+    double p4 = ui->lineEdit_11->text().toDouble();
+    double p5 = ui->lineEdit_12->text().toDouble();
+    double p6 = ui->lineEdit_13->text().toDouble();
+    worker->publishPosition(p1, p2, p3, p4, p5, p6);
 }
 
 

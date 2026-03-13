@@ -238,6 +238,9 @@ Python3_EXECUTABLE:FILEPATH=/usr/bin/python3
 //Name of the computer/site where compile is being run
 SITE:STRING=theanh
 
+//Path to a library.
+_lib:FILEPATH=/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_fastrtps_cpp.so
+
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
 
@@ -330,6 +333,63 @@ control_one_motor_pkg_ex_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 control_one_motor_pkg_ex_SOURCE_DIR:STATIC=/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex
+
+//The directory containing a CMake configuration file for ethercat_msgs.
+ethercat_msgs_DIR:PATH=/home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake
+
+//The directory containing a CMake configuration file for fastcdr.
+fastcdr_DIR:PATH=/opt/ros/humble/lib/cmake/fastcdr
+
+//The directory containing a CMake configuration file for fastrtps_cmake_module.
+fastrtps_cmake_module_DIR:PATH=/opt/ros/humble/share/fastrtps_cmake_module/cmake
+
+//The directory containing a CMake configuration file for rcpputils.
+rcpputils_DIR:PATH=/opt/ros/humble/share/rcpputils/cmake
+
+//The directory containing a CMake configuration file for rcutils.
+rcutils_DIR:PATH=/opt/ros/humble/share/rcutils/cmake
+
+//The directory containing a CMake configuration file for rmw.
+rmw_DIR:PATH=/opt/ros/humble/share/rmw/cmake
+
+//The directory containing a CMake configuration file for rosidl_adapter.
+rosidl_adapter_DIR:PATH=/opt/ros/humble/share/rosidl_adapter/cmake
+
+//The directory containing a CMake configuration file for rosidl_cmake.
+rosidl_cmake_DIR:PATH=/opt/ros/humble/share/rosidl_cmake/cmake
+
+//The directory containing a CMake configuration file for rosidl_generator_c.
+rosidl_generator_c_DIR:PATH=/opt/ros/humble/share/rosidl_generator_c/cmake
+
+//The directory containing a CMake configuration file for rosidl_generator_cpp.
+rosidl_generator_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_generator_cpp/cmake
+
+//The directory containing a CMake configuration file for rosidl_runtime_c.
+rosidl_runtime_c_DIR:PATH=/opt/ros/humble/share/rosidl_runtime_c/cmake
+
+//The directory containing a CMake configuration file for rosidl_runtime_cpp.
+rosidl_runtime_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_runtime_cpp/cmake
+
+//The directory containing a CMake configuration file for rosidl_typesupport_c.
+rosidl_typesupport_c_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_c/cmake
+
+//The directory containing a CMake configuration file for rosidl_typesupport_cpp.
+rosidl_typesupport_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_cpp/cmake
+
+//The directory containing a CMake configuration file for rosidl_typesupport_fastrtps_c.
+rosidl_typesupport_fastrtps_c_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/cmake
+
+//The directory containing a CMake configuration file for rosidl_typesupport_fastrtps_cpp.
+rosidl_typesupport_fastrtps_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/cmake
+
+//The directory containing a CMake configuration file for rosidl_typesupport_interface.
+rosidl_typesupport_interface_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_interface/cmake
+
+//The directory containing a CMake configuration file for rosidl_typesupport_introspection_c.
+rosidl_typesupport_introspection_c_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_introspection_c/cmake
+
+//The directory containing a CMake configuration file for rosidl_typesupport_introspection_cpp.
+rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/cmake
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint

@@ -1,0 +1,21 @@
+[ 16%] [34m[1mAutomatic MOC and UIC for target ros2_qt1_demo[0m
+[ 16%] Built target ros2_qt1_demo_autogen
+[100%] Built target ros2_qt1_demo
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/lib/ros2_qt1_demo/ros2_qt1_demo
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/package_run_dependencies/ros2_qt1_demo
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/parent_prefix_path/ros2_qt1_demo
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/path.sh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/path.dsv
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.bash
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.sh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.zsh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.dsv
+-- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.dsv
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/packages/ros2_qt1_demo
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/cmake/ros2_qt1_demoConfig.cmake
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/cmake/ros2_qt1_demoConfig-version.cmake
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.xml

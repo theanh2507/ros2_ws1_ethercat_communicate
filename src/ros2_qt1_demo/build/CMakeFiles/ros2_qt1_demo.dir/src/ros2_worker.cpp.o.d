@@ -684,4 +684,14 @@ CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64_multi_array__type_support.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/joint_trajectory.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__struct.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__builder.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__traits.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__type_support.hpp \
+ /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/rosidl_generator_cpp__visibility_control.hpp

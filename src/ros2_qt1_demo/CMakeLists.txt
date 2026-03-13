@@ -22,9 +22,10 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(trajectory_msgs REQUIRED)
 
 # --------------------------------------------------------------------------
-# 3. QUẢN LÝ FILE NGUỒN (Lấy từ bản ROS 2)
+# 3. QUẢN LÝ FILE NGUỒN
 # --------------------------------------------------------------------------
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 file(GLOB_RECURSE HEADERS "include/*.h" "include/*.hpp")
@@ -37,20 +38,22 @@ file(GLOB_RECURSE RESOURCES "resource/*.qrc")
 
 # Chỉ cho CMake biết các file .ui nằm trong thư mục ui/
 set(CMAKE_AUTOUIC_SEARCH_PATHS "${CMAKE_CURRENT_SOURCE_DIR}/ui")
+
 add_executable(${PROJECT_NAME}
   src/main.cpp 
   ${SOURCES}
   ${HEADERS}
   ${UIS}
   ${RESOURCES}
-  src/ros2_worker.cpp   # Phải có file .cpp này
-  include/ros2_worker.h
+  # src/ros2_worker.cpp   ##########
+  # include/ros2_worker.h
 )
 
 ament_target_dependencies(${PROJECT_NAME}
   rclcpp
   std_msgs
   geometry_msgs
+  trajectory_msgs
 )
 
 # Thư mục include cho ROS 2

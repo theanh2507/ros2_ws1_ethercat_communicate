@@ -1,0 +1,76 @@
+[0.014s] Invoking command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake /home/theanh/ros2_ws1/src/ros2_qt1_demo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/ros2_ws1/install/ros2_qt1_demo
+[1.131s] -- The C compiler identification is GNU 11.4.0
+[1.928s] -- The CXX compiler identification is GNU 11.4.0
+[1.938s] -- Detecting C compiler ABI info
+[2.078s] -- Detecting C compiler ABI info - done
+[2.084s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.085s] -- Detecting C compile features
+[2.109s] -- Detecting C compile features - done
+[2.127s] -- Detecting CXX compiler ABI info
+[2.248s] -- Detecting CXX compiler ABI info - done
+[2.255s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.255s] -- Detecting CXX compile features
+[2.255s] -- Detecting CXX compile features - done
+[2.355s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.609s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.730s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.433s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[3.514s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.523s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.537s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.555s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.580s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.812s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.836s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[4.213s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[4.246s] -- Found FastRTPS: /opt/ros/humble/include  
+[4.296s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.331s] -- Looking for pthread.h
+[4.554s] -- Looking for pthread.h - found
+[4.554s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.656s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.657s] -- Found Threads: TRUE  
+[4.845s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[4.908s] -- Found trajectory_msgs: 4.9.1 (/opt/ros/humble/share/trajectory_msgs/cmake)
+[4.935s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.040s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.040s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/theanh/ros2_ws1/src/ros2_qt1_demo/include>
+[5.040s] -- Configured cppcheck exclude dirs and/or files: 
+[5.043s] -- Added test 'lint_cmake' to check CMake code style
+[5.052s] -- Added test 'uncrustify' to check C / C++ code style
+[5.052s] -- Configured uncrustify additional arguments: 
+[5.054s] -- Added test 'xmllint' to check XML markup files
+[5.056s] -- Configuring done
+[5.733s] -- Generating done
+[5.738s] -- Build files have been written to: /home/theanh/ros2_ws1/build/ros2_qt1_demo
+[5.748s] Invoked command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake /home/theanh/ros2_ws1/src/ros2_qt1_demo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/ros2_ws1/install/ros2_qt1_demo
+[5.749s] Invoking command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ros2_qt1_demo -- -j16 -l16
+[5.799s] [ 16%] [34m[1mAutomatic MOC and UIC for target ros2_qt1_demo[0m
+[8.559s] [ 16%] Built target ros2_qt1_demo_autogen
+[8.585s] [ 50%] [32mBuilding CXX object CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.o[0m
+[8.585s] [ 50%] [32mBuilding CXX object CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o[0m
+[8.585s] [ 66%] [32mBuilding CXX object CMakeFiles/ros2_qt1_demo.dir/ros2_qt1_demo_autogen/mocs_compilation.cpp.o[0m
+[8.585s] [ 83%] [32mBuilding CXX object CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o[0m
+[13.578s] [100%] [32m[1mLinking CXX executable ros2_qt1_demo[0m
+[14.477s] [100%] Built target ros2_qt1_demo
+[14.491s] Invoked command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ros2_qt1_demo -- -j16 -l16
+[14.493s] Invoking command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ros2_qt1_demo
+[14.503s] -- Install configuration: ""
+[14.503s] -- Execute custom install script
+[14.503s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/lib/ros2_qt1_demo/ros2_qt1_demo
+[14.515s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/package_run_dependencies/ros2_qt1_demo
+[14.527s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/parent_prefix_path/ros2_qt1_demo
+[14.539s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/ament_prefix_path.sh
+[14.551s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/ament_prefix_path.dsv
+[14.563s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/path.sh
+[14.575s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/path.dsv
+[14.588s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.bash
+[14.601s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.sh
+[14.613s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.zsh
+[14.625s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.dsv
+[14.638s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.dsv
+[14.651s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/packages/ros2_qt1_demo
+[14.663s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/cmake/ros2_qt1_demoConfig.cmake
+[14.676s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/cmake/ros2_qt1_demoConfig-version.cmake
+[14.689s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.xml
+[14.703s] Invoked command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ros2_qt1_demo

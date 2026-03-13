@@ -14,6 +14,7 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
+        <state_interface name="digital_inputs"/>
 
         <!-- <command_interface name="velocity"/> -->
         <!-- <command_interface name="mode_of_operation"/> -->
@@ -24,33 +25,118 @@
         <ec_module name="M54S">
           <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
           <param name="alias">0</param>
-          <param name="position">0</param>                      <!-- id slave -->
+          <param name="position">0</param>                          <!-- id slave -->
+           <!-- 9 = Velocity mode 8 = Position mode -->
+          <!-- <param name="mode_of_operation">8</param>-->
+          <param name="slave_config">$(find control_one_motor_pkg_ex)/config/motor_config.yaml</param>
+        </ec_module>
+      </joint>
+
+      <joint name="joint_2">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+        <state_interface name="digital_inputs"/>
+
+        <!-- <command_interface name="velocity"/> -->
+        <!-- <command_interface name="mode_of_operation"/> -->
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <command_interface name="reset_fault"/> 
+        <command_interface name="controlword"/>
+        <ec_module name="M54S">
+          <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
+          <param name="alias">0</param>
+          <param name="position">1</param>                          <!-- id slave -->
           <!-- <param name="mode_of_operation">8</param>             9 = Velocity mode 8 = Position mode -->
           <param name="slave_config">$(find control_one_motor_pkg_ex)/config/motor_config.yaml</param>
-
-          <!-- <param name="position_factor">0.00062831853</param>
-          <param name="velocity_factor">0.00062831853</param> -->
-
         </ec_module>
       </joint>
 
 
-      <!-- <joint name="joint_2">
+      <joint name="joint_3">
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
+        <state_interface name="digital_inputs"/>
 
+        <!-- <command_interface name="velocity"/> -->
+        <!-- <command_interface name="mode_of_operation"/> -->
         <command_interface name="position"/>
-        <command_interface name="reset_fault"/>
+        <command_interface name="velocity"/>
+        <command_interface name="reset_fault"/> 
+        <command_interface name="controlword"/>
         <ec_module name="M54S">
           <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
           <param name="alias">0</param>
-          <param name="position">1</param>
-          <param name="mode_of_operation">8</param>            
+          <param name="position">2</param>                          <!-- id slave -->
+          <!-- <param name="mode_of_operation">8</param>             9 = Velocity mode 8 = Position mode -->
           <param name="slave_config">$(find control_one_motor_pkg_ex)/config/motor_config.yaml</param>
-
         </ec_module>
-      </joint> -->
+      </joint>
+
+      <joint name="joint_4">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+        <state_interface name="digital_inputs"/>
+
+        <!-- <command_interface name="velocity"/> -->
+        <!-- <command_interface name="mode_of_operation"/> -->
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <command_interface name="reset_fault"/> 
+        <command_interface name="controlword"/>
+        <ec_module name="M54S">
+          <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
+          <param name="alias">0</param>
+          <param name="position">3</param>                          <!-- id slave -->
+          <!-- <param name="mode_of_operation">8</param>             9 = Velocity mode 8 = Position mode -->
+          <param name="slave_config">$(find control_one_motor_pkg_ex)/config/motor_config.yaml</param>
+        </ec_module>
+      </joint>
+
+      <joint name="joint_5">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+        <state_interface name="digital_inputs"/>
+
+        <!-- <command_interface name="velocity"/> -->
+        <!-- <command_interface name="mode_of_operation"/> -->
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <command_interface name="reset_fault"/> 
+        <command_interface name="controlword"/>
+        <ec_module name="M54S">
+          <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
+          <param name="alias">0</param>
+          <param name="position">4</param>                          <!-- id slave -->
+          <!-- <param name="mode_of_operation">8</param>             9 = Velocity mode 8 = Position mode -->
+          <param name="slave_config">$(find control_one_motor_pkg_ex)/config/motor_config.yaml</param>
+        </ec_module>
+      </joint>
+
+      <joint name="joint_6">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+        <state_interface name="digital_inputs"/>
+
+        <!-- <command_interface name="velocity"/> -->
+        <!-- <command_interface name="mode_of_operation"/> -->
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <command_interface name="reset_fault"/> 
+        <command_interface name="controlword"/>
+        <ec_module name="M54S">
+          <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
+          <param name="alias">0</param>
+          <param name="position">5</param>                          <!-- id slave -->
+          <!-- <param name="mode_of_operation">8</param>             9 = Velocity mode 8 = Position mode -->
+          <param name="slave_config">$(find control_one_motor_pkg_ex)/config/motor_config.yaml</param>
+        </ec_module>
+      </joint>
       
     </ros2_control>
 

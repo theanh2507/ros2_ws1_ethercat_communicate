@@ -2,14 +2,18 @@
 #define MAINWINDOW_H
 
 
-#include "rclcpp/rclcpp.hpp"
-#include <memory>
+
 
 #include <QMainWindow>
 #include <QDebug>
 #include <QProcess>
-#include "ros2_worker.h"
 #include <QThread>
+
+#include <memory>
+#include "rclcpp/rclcpp.hpp"
+
+#include "ros2_worker.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,17 +43,25 @@ private:
     QProcess *modeOfOperationProcess = nullptr;
 
 
-    void onButtonClicked();
+    std::shared_ptr<rclcpp::Node> nodePubVelHome;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publishVelHomeToRos;                 // publish vel home from GUI to ros2
 
+
+    void onButtonClicked();
     void startServiceEtherCAT();
-    void enableMotor();
-    void disableMotor();
-    void resetFaultError();
+
+    void enableMotor(uint8_t slave);
+    void disableMotor(uint8_t slave);
+    void resetFaultError(uint8_t slave);
 
     void modeOfOperation(uint8_t mode);
 
     void jogNDirection();
     void jogPDirection();
     void stopMotor();
+
+    void moveToPosition();
+
+    void sendVelToRos();
 };
 #endif // MAINWINDOW_H
