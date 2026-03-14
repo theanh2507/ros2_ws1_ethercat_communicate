@@ -62,6 +62,6 @@ private:
 
     void moveToPosition();
 
-    void sendVelToRos();
+    void sendVelHomeToRos();
 };
 #endif // MAINWINDOW_H

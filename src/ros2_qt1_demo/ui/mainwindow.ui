@@ -63,13 +63,6 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_10">
-            <property name="text">
-             <string>reset alarm </string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <spacer name="verticalSpacer_3">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -370,13 +363,6 @@
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QLabel" name="label_17">
-            <property name="text">
-             <string>Acc home</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
         <item>
@@ -386,9 +372,6 @@
           </item>
           <item>
            <widget class="QLineEdit" name="lineEdit_15"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="lineEdit_16"/>
           </item>
          </layout>
         </item>

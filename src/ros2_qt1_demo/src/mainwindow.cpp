@@ -18,6 +18,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rosThread, &QThread::started, worker, &ROS2Worker::spin);
     rosThread->start();
 
+
+
+    // send vel homing to ros from GUI
+    nodePubVelHome = rclcpp::Node::make_shared("gui_homing_publisher");
+    publishVelHomeToRos = nodePubVelHome->create_publisher<std_msgs::msg::Float64MultiArray>("homing_manager_topic", 10);
+    connect(ui->pushButton_11, &QPushButton::clicked, this, &MainWindow::sendVelHomeToRos);
+
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::onButtonClicked);
     // connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::enableMotor);
     // connect(ui->pushButton_5, &QPushButton::clicked, this, &MainWindow::disableMotor);
@@ -248,54 +255,36 @@ void MainWindow::moveToPosition() {
 }
 
 
-// void MainWindow::jogPDirection()
-// {
-//     QString velocityStr = ui->lineEdit->text();
+void MainWindow::sendVelHomeToRos() {
+    double velLimit = ui->lineEdit_14->text().toDouble();
+    double velHome = ui->lineEdit_15->text().toDouble();
 
-//     if(velocityStr.isEmpty()) velocityStr = "0.0";
-
-//     qDebug() << "Jogging Positive with velocity:" << velocityStr;
-
-//     QProcess *jogProcess = new QProcess(this);
+    auto message = std_msgs::msg::Float64MultiArray();
+    message.data = {velLimit, velHome};
+    publishVelHomeToRos->publish(message);
     
-//     QString command = QString(
-//         // "source /opt/ros/humble/setup.bash && "
-//         // "source /home/theanh/ros2_ws1/install/setup.bash && "
-//         "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [%1]}\""
-//     ).arg(velocityStr);
-
-//     jogProcess->start("bash", QStringList() << "-c" << command);
-
-//     // connect(jogProcess, &QProcess::finished, jogProcess, &QProcess::deleteLater);
-// }
-
-// void MainWindow::jogNDirection()
-// {
-//     QString velocityStr = ui->lineEdit->text();
-//     if(velocityStr.isEmpty()) velocityStr = "0.0";
-
-//     double v = velocityStr.toDouble();
-//     QString negativeVelocity = QString::number(-v);
-
-//     qDebug() << "Jogging Negative with velocity:" << negativeVelocity;
-
-//     QProcess *jogProcess = new QProcess(this);
-//     QString command = QString(
-//         "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [%1]}\""
-//     ).arg(negativeVelocity);
-
-//     jogProcess->start("bash", QStringList() << "-c" << command);
-//     // connect(jogProcess, &QProcess::finished, jogProcess, &QProcess::deleteLater);
-// }
-
-// void MainWindow::stopMotor()
-// {
-//     qDebug() << "Button released. Stopping motor...";
+    QProcess *process = new QProcess(this);
     
-//     QProcess *stopProcess = new QProcess(this);
-//     QString command = "ros2 topic pub --once /velocity_controller/commands std_msgs/msg/Float64MultiArray \"{data: [0.0]}\"";
+    QString program = "/bin/bash";
+    QString wsPath = "/home/theanh/ros2_ws1";
+    QString scriptPath = wsPath + "/src/control_one_motor_pkg_ex/scripts/control_motor.py";
 
-//     stopProcess->start("bash", QStringList() << "-c" << command);
-//     // connect(stopProcess, &QProcess::finished, stopProcess, &QProcess::deleteLater);
-// }
+    QString command = QString("source /opt/ros/humble/setup.bash && "
+                              "source %1/install/setup.bash && "
+                              "python3 %2").arg(wsPath).arg(scriptPath);
+
+    QStringList arguments;
+    arguments << "-c" << command; 
+
+    process->start(program, arguments);
+
+    connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), 
+        process, &QProcess::deleteLater);
+
+    if (!process->waitForStarted()) {
+        qDebug() << "Lỗi: Không thể khởi động script Python!";
+    } else {
+        qDebug() << "dang chay homing...";
+    }
+}
 
