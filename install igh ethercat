@@ -1,0 +1,37 @@
+sudo apt-get install mokutil
+mokutil --sb-statesudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git autoconf libtool pkg-config make build-essential net-tools
+git clone https://gitlab.com/etherlab.org/ethercat.git
+cd ethercat
+git checkout stable-1.5
+sudo rm /usr/bin/ethercat
+sudo rm /etc/init.d/ethercat
+./bootstrap  # to create the configure script
+./configure --prefix=/usr/local/etherlab  --disable-8139too --disable-eoe --enable-generic --with-linux-dir=/usr/src/linux-headers-$(uname -r)/
+
+#--with-linux-dir=/usr/src/linux-headers-5.13.0-28-generic/  这部分要根据 uname -a 里的反馈结果来修改
+#注意要禁用掉本机的 ubuntu 自动升级内核的功能
+
+make all modules
+sudo make modules_install install
+sudo depmod
+
+sudo ln -s /usr/local/etherlab/bin/ethercat /usr/bin/
+sudo ln -s /usr/local/etherlab/etc/init.d/ethercat /etc/init.d/ethercat
+#sudo ln -s /opt/etherlab/bin/ethercat /usr/bin/
+#sudo ln -s /opt/etherlab/etc/init.d/ethercat /etc/init.d/ethercat
+sudo mkdir -p /etc/sysconfig
+sudo cp /usr/local/etherlab/etc/sysconfig/ethercat /etc/sysconfig/ethercat
+#sudo cp /opt/etherlab/etc/sysconfig/ethercat /etc/sysconfig/ethercat
+sudo gedit /etc/udev/rules.d/99-EtherCAT.rules
+#KERNEL=="EtherCAT[0-9]*", MODE="0666"
+
+sudo gedit /etc/sysconfig/ethercat
+#MASTER0_DEVICE="00:0c:29:ad:73:22"
+#DEVICE_MODULES="generic"
+
+
+sudo /etc/init.d/ethercat start
+
+ethercat slaves
