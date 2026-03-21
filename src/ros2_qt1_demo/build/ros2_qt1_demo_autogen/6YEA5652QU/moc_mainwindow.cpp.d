@@ -1,5 +1,6 @@
 /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/ros2_qt1_demo_autogen/6YEA5652QU/moc_mainwindow.cpp: /home/theanh/ros2_ws1/src/ros2_qt1_demo/include/mainwindow.h \
   /home/theanh/ros2_ws1/src/ros2_qt1_demo/build/ros2_qt1_demo_autogen/moc_predefs.h \
+  /home/theanh/ros2_ws1/src/ros2_qt1_demo/include/displayStatuMotor.h \
   /home/theanh/ros2_ws1/src/ros2_qt1_demo/include/ros2_worker.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
@@ -12,6 +13,14 @@
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__builder.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__struct.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__traits.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__type_support.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/interface_value__struct.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/interface_value__traits.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/dynamic_joint_state.hpp \
+  /opt/ros/humble/include/control_msgs/control_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp \
   /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp \
   /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp \
@@ -333,6 +342,12 @@
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp \
   /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__builder.hpp \
   /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp \
   /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__traits.hpp \
@@ -351,8 +366,13 @@
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/float64_multi_array.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
   /opt/ros/humble/include/tracetools/tracetools/config.h \
   /opt/ros/humble/include/tracetools/tracetools/tracetools.h \
   /opt/ros/humble/include/tracetools/tracetools/utils.hpp \

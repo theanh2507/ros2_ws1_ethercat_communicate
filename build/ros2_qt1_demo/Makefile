@@ -247,6 +247,30 @@ ros2_qt1_demo_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/ros2_qt1_demo_autogen/mocs_compilation.cpp.s
 .PHONY : ros2_qt1_demo_autogen/mocs_compilation.cpp.s
 
+src/displayStatuMotor.o: src/displayStatuMotor.cpp.o
+.PHONY : src/displayStatuMotor.o
+
+# target to build an object file
+src/displayStatuMotor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o
+.PHONY : src/displayStatuMotor.cpp.o
+
+src/displayStatuMotor.i: src/displayStatuMotor.cpp.i
+.PHONY : src/displayStatuMotor.i
+
+# target to preprocess a source file
+src/displayStatuMotor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.i
+.PHONY : src/displayStatuMotor.cpp.i
+
+src/displayStatuMotor.s: src/displayStatuMotor.cpp.s
+.PHONY : src/displayStatuMotor.s
+
+# target to generate assembly for a file
+src/displayStatuMotor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_qt1_demo.dir/build.make CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.s
+.PHONY : src/displayStatuMotor.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -339,6 +363,9 @@ help:
 	@echo "... ros2_qt1_demo_autogen/mocs_compilation.o"
 	@echo "... ros2_qt1_demo_autogen/mocs_compilation.i"
 	@echo "... ros2_qt1_demo_autogen/mocs_compilation.s"
+	@echo "... src/displayStatuMotor.o"
+	@echo "... src/displayStatuMotor.i"
+	@echo "... src/displayStatuMotor.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

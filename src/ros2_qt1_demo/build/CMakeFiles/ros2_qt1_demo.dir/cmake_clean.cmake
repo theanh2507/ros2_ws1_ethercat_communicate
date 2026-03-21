@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "ros2_qt1_demo_autogen"
   "CMakeFiles/ros2_qt1_demo.dir/ros2_qt1_demo_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/ros2_qt1_demo.dir/ros2_qt1_demo_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o"
+  "CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o.d"
   "CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.o"
   "CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.o.d"
   "CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o"

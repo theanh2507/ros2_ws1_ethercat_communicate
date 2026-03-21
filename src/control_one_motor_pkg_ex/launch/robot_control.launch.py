@@ -96,7 +96,7 @@ def generate_launch_description():
             target_action=joint_state_broadcaster_spawner,
             on_exit=[
                 TimerAction(
-                    period=10.0,
+                    period=20.0,
                     actions=[velocity_controller_spawner,
                              trajectory_controller_spawner],
                 )]
@@ -123,3 +123,5 @@ def generate_launch_description():
 # ros2 service call /ethercat_manager/get_sdo ethercat_msgs/srv/GetSdo "{master_id: 0, slave_position: 0, sdo_index: 0x6041, sdo_subindex: 0, sdo_data_type: 'uint16'}"
 # ros2 service call /ethercat_manager/set_sdo ethercat_msgs/srv/SetSdo "{master_id: 0, slave_position: 0, sdo_index: 0x6040, sdo_subindex: 0, sdo_data_type: 'uint16', sdo_value: 15}"
 # watch -n 0.1 "ethercat upload -p 0 -t uint32 0x60FD 0"
+# ros2 topic echo /trajectory_controller/state
+# ros2 control set_controller_state trajectory_controller active

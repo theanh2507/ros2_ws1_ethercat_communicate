@@ -23,7 +23,8 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
-
+find_package(sensor_msgs REQUIRED)
+find_package(control_msgs REQUIRED)
 # --------------------------------------------------------------------------
 # 3. QUẢN LÝ FILE NGUỒN
 # --------------------------------------------------------------------------
@@ -54,6 +55,8 @@ ament_target_dependencies(${PROJECT_NAME}
   std_msgs
   geometry_msgs
   trajectory_msgs
+  sensor_msgs
+  control_msgs
 )
 
 # Thư mục include cho ROS 2

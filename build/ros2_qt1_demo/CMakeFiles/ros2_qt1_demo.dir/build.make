@@ -97,10 +97,24 @@ CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/main.cpp -o CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.s
 
+CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o: CMakeFiles/ros2_qt1_demo.dir/flags.make
+CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o: /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/displayStatuMotor.cpp
+CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o: CMakeFiles/ros2_qt1_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theanh/ros2_ws1/build/ros2_qt1_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o -MF CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o.d -o CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o -c /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/displayStatuMotor.cpp
+
+CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/displayStatuMotor.cpp > CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.i
+
+CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/displayStatuMotor.cpp -o CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.s
+
 CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o: CMakeFiles/ros2_qt1_demo.dir/flags.make
 CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o: /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/mainwindow.cpp
 CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o: CMakeFiles/ros2_qt1_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theanh/ros2_ws1/build/ros2_qt1_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theanh/ros2_ws1/build/ros2_qt1_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o -MF CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o.d -o CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o -c /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/mainwindow.cpp
 
 CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.s: cmake_force
 CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o: CMakeFiles/ros2_qt1_demo.dir/flags.make
 CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o: /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/ros2_worker.cpp
 CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o: CMakeFiles/ros2_qt1_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theanh/ros2_ws1/build/ros2_qt1_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theanh/ros2_ws1/build/ros2_qt1_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o -MF CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o.d -o CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o -c /home/theanh/ros2_ws1/src/ros2_qt1_demo/src/ros2_worker.cpp
 
 CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.i: cmake_force
@@ -129,6 +143,7 @@ CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.s: cmake_force
 ros2_qt1_demo_OBJECTS = \
 "CMakeFiles/ros2_qt1_demo.dir/ros2_qt1_demo_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.o" \
+"CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o" \
 "CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o" \
 "CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o"
 
@@ -137,16 +152,17 @@ ros2_qt1_demo_EXTERNAL_OBJECTS =
 
 ros2_qt1_demo: CMakeFiles/ros2_qt1_demo.dir/ros2_qt1_demo_autogen/mocs_compilation.cpp.o
 ros2_qt1_demo: CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.o
+ros2_qt1_demo: CMakeFiles/ros2_qt1_demo.dir/src/displayStatuMotor.cpp.o
 ros2_qt1_demo: CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o
 ros2_qt1_demo: CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o
 ros2_qt1_demo: CMakeFiles/ros2_qt1_demo.dir/build.make
 ros2_qt1_demo: /opt/ros/humble/lib/librclcpp.so
-ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_c.so
-ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_cpp.so
-ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_c.so
-ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_cpp.so
-ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_cpp.so
-ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_generator_py.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_introspection_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_introspection_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_generator_py.so
 ros2_qt1_demo: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 ros2_qt1_demo: /opt/ros/humble/lib/liblibstatistics_collector.so
 ros2_qt1_demo: /opt/ros/humble/lib/librcl.so
@@ -181,48 +197,80 @@ ros2_qt1_demo: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libtracetools.so
+ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_fastrtps_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_fastrtps_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 ros2_qt1_demo: /opt/ros/humble/lib/librmw.so
+ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
 ros2_qt1_demo: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
+ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_generator_py.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libcontrol_msgs__rosidl_generator_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_generator_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_py.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_py.so
+ros2_qt1_demo: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
+ros2_qt1_demo: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/librosidl_typesupport_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/librcpputils.so
 ros2_qt1_demo: /opt/ros/humble/lib/librosidl_runtime_c.so
 ros2_qt1_demo: /opt/ros/humble/lib/librcutils.so
-ros2_qt1_demo: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 ros2_qt1_demo: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 ros2_qt1_demo: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 ros2_qt1_demo: CMakeFiles/ros2_qt1_demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theanh/ros2_ws1/build/ros2_qt1_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ros2_qt1_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theanh/ros2_ws1/build/ros2_qt1_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ros2_qt1_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ros2_qt1_demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

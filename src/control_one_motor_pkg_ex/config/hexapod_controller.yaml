@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 100  # Hz
+    update_rate: 1000  # Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -29,7 +29,8 @@ trajectory_controller:
       - joint_5
       - joint_6
     # true: open loop control, false: close loop control
-    open_loop_control: true     
+    open_loop_control: false    
+    # generate_interpolation_points: true 
 
 velocity_controller:
   ros__parameters:

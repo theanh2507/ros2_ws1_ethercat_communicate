@@ -752,6 +752,26 @@ CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o: \
  /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__traits.hpp \
  /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__type_support.hpp \
  /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/theanh/ros2_ws1/src/ros2_qt1_demo/include/displayStatuMotor.h \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/dynamic_joint_state.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__struct.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/interface_value__struct.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__builder.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__traits.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/interface_value__traits.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__type_support.hpp \
+ /opt/ros/humble/include/control_msgs/control_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
  /home/theanh/ros2_ws1/build/ros2_qt1_demo/ros2_qt1_demo_autogen/include/./ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \

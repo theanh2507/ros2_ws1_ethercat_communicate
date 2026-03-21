@@ -13,7 +13,9 @@
 #include "rclcpp/rclcpp.hpp"
 
 #include "ros2_worker.h"
+#include "displayStatuMotor.h"
 
+#include <std_msgs/msg/string.hpp>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -33,12 +35,12 @@ private:
     ROS2Worker *worker;
     QThread *rosThread;
 
+    DisplayStatusMotor *displayStatusMotor;
+    QThread *displayStatusMotorThread;
+
 
     QProcess *startServiceEtherCATProcess = nullptr;
     
-    QProcess *enableMotorProcess = nullptr;
-    QProcess *disableMotorProcess = nullptr;
-    QProcess *resetFaultErrorProcess = nullptr;
 
     QProcess *modeOfOperationProcess = nullptr;
 
@@ -46,15 +48,22 @@ private:
     std::shared_ptr<rclcpp::Node> nodePubVelHome;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publishVelHomeToRos;                 // publish vel home from GUI to ros2
 
+    std::shared_ptr<rclcpp::Node> nodeMode;
+    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisherMode;
+
 
     void onButtonClicked();
     void startServiceEtherCAT();
+    
+    void enableMotor();
+    void disableMotor();
+    void resetFaultError();
 
-    void enableMotor(uint8_t slave);
-    void disableMotor(uint8_t slave);
-    void resetFaultError(uint8_t slave);
+    // void modeOfOperation(uint8_t mode);
+    // void executeModeSwitch(uint8_t mode, QString wsPath);
 
-    void modeOfOperation(uint8_t mode);
+    void modeOfOperation(uint8_t mode, uint8_t slave);
+    void executeModeSwitch(uint8_t mode, uint8_t slave, QString wsPath);    
 
     void jogNDirection();
     void jogPDirection();

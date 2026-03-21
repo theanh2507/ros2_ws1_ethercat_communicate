@@ -27,4 +27,4 @@ tpdo:
       # - {index: 0x606c, sub_index: 0, type: int32, state_interface: velocity, factor: 0.00062831853} # 4 byte
       - {index: 0x6077, sub_index: 0, type: int16, state_interface: effort} # 2 byte
       - {index: 0x60FD, sub_index: 0, type: uint32, state_interface: digital_inputs} # 1 byte
-      - {index: 0x6061, sub_index: 0, type: int8} # 1 byte
+      - {index: 0x6061, sub_index: 0, type: int8, state_interface: mode_of_operation} # 1 byte
