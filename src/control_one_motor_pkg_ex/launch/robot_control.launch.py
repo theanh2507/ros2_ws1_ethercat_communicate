@@ -89,7 +89,7 @@ def generate_launch_description():
         executable='rviz2',
         arguments=['-d', rviz_config_file],
         output='screen'
-    )
+    )           
 
     delay_controller = RegisterEventHandler(
         event_handler=OnProcessExit(

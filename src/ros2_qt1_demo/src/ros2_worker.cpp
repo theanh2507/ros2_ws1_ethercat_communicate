@@ -55,7 +55,7 @@ void ROS2Worker::publishPosition(double p1, double p2, double p3, double p4, dou
 
     position_publisher->publish(message);
     
-    RCLCPP_INFO(node->get_logger(), "Published Position: [%.2f, %.2f, %.2f, %.2f, %.2f, %.2f] to all joints in 2s", p1, p2, p3, p4, p5, p6);
+    RCLCPP_INFO(node->get_logger(), "Published Position: [%.2f, %.2f, %.2f, %.2f, %.2f, %.2f] to all joints in 4s", p1, p2, p3, p4, p5, p6);
 }
 
 void ROS2Worker::stop() {
