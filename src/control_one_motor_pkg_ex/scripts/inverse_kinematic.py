@@ -19,7 +19,9 @@ class Kinematics(Node):
         self.PULSE_PER_REV = 10000.0  # 10000 xung
         self.LEAD_SCREW_MM = 5.0      # 5 mm
         self.PULSE_TO_MM = self.LEAD_SCREW_MM / self.PULSE_PER_REV
-        self.L_HOME = 50.0            # mm
+        self.L_HOME = 30.0            # mm
+        self.L_LEG_OFFSET = 984.0     # 930 + 54
+        self.Z_OFFSET = 200           # mm
 
         self.RADIUS_BASE = 500      
         self.RADIUS_PLATFROM = 350
@@ -34,10 +36,12 @@ class Kinematics(Node):
 
         self.publisher_ = self.create_publisher(
             JointTrajectory, 
-            '/joint_trajectory_controller/joint_trajectory', 
+            '/trajectory_controller/joint_trajectory', 
             10)
         
         self.timer = self.create_timer(0.1, self.control_loop)
+
+        self.timer_count = 0
 
         self.rB = 500.0  # mm
         self.rP = 350.0  # mm
@@ -49,7 +53,7 @@ class Kinematics(Node):
         
 
         def get_coords_platfrom(r, angles):
-            return np.array([[r * np.cos(a), r * np.sin(a), 1000] for a in angles])
+            return np.array([[r * np.cos(a), r * np.sin(a), 981.5] for a in angles])
 
         # base_angles = [
         #     self.phiB, -self.phiB, 
@@ -89,7 +93,7 @@ class Kinematics(Node):
             except (ValueError, IndexError):
                 continue
 
-        self.get_logger().info(f'Joint Position: {self.joint_positions}')
+        # self.get_logger().info(f'Joint Position: {self.joint_positions}')
     
     def get_rotation_matrix(self, roll, pitch, yaw):
         # xoay quanh x
@@ -107,7 +111,7 @@ class Kinematics(Node):
                     [np.sin(np.radians(yaw)), np.cos(np.radians(yaw)), 0],
                     [0, 0, 1]])
         
-        return Rx @ Ry @ Rz
+        return Rz @ Ry @ Rx
     
     def calculate_inverse_kinematics(self, T, R):
         """
@@ -125,39 +129,57 @@ class Kinematics(Node):
             
         return np.array(leg_lengths)
         
+
     def control_loop(self):
-        target_T = np.array([0.0, 0.0, 300.0])
+        target_T = np.array([0.0, 0.0, 0.0])
         target_R = self.get_rotation_matrix(0, 0, 0)
+        self.get_logger().info(f'Ma tran xoay la: {target_R}')
 
-        self.get_logger().info(f'target_R: {target_R}')
+        lengths_mm = self.calculate_inverse_kinematics(target_T, target_R)
 
-        lengths = self.calculate_inverse_kinematics(target_T, target_R)
-        self.get_logger().info(f'do dai cac chan la: {lengths}')
+        # self.get_logger().info(f'Gia tri do dai xy lanh 12 chan: {lengths_mm}')
+        
+        if lengths_mm is not None:
+            lengths_mm= [
+                (l - self.L_HOME - self.L_LEG_OFFSET) for l in lengths_mm]
+            
+            # self.get_logger().info(f'Gia tri do dai xy lanh 12 chan: {lengths_mm}')
+        
+            real_cylinder_lengths = [l + self.L_HOME for l in lengths_mm]
 
-        if lengths is not None:
-            self.publish_trajectory(lengths)
+            self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
+
+            self.publish_trajectory(lengths_mm)
+
+            self.timer_count += 1
+            if(self.timer_count >= 5):
+                self.timer_count = 0
+                self.timer.cancel()
+            # self.timer.cancel()
+
     
     def mm_to_pulse(self, target_position):
-        self.target_pulse = (target_position - self.L_HOME) / self.PULSE_TO_MM
+        self.target_pulse = target_position / self.PULSE_TO_MM
         return self.target_pulse
 
     def publish_trajectory(self, lengths):
         msg = JointTrajectory()
+        msg.header.stamp = self.get_clock().now().to_msg()
         msg.joint_names = [f'joint_{i+1}' for i in range(6)]
         
         point = JointTrajectoryPoint()
         
-        point.positions = [float(self.mm_to_pulse(l)) for l in lengths]
+        point.positions = [float(self.mm_to_pulse(-l)) for l in lengths]
         
         point.velocities = [0.0] * 6
         
-        point.time_from_start = Duration(sec=2, nanosec=0) 
+        point.time_from_start = Duration(sec=5, nanosec=0) 
 
         msg.points.append(point)
     
         self.publisher_.publish(msg)
         
-        # self.get_logger().info(f'Target Pulse Joint 1: {point.positions[0]}')
+        self.get_logger().info(f'Target Pulse 6 Joint : {point.positions}')
 
 def main(args=None):
     rclpy.init(args=args)

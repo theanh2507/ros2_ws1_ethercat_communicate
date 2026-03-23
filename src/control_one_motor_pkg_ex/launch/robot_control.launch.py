@@ -103,6 +103,16 @@ def generate_launch_description():
         )
     )
 
+    status_motor = Node(
+            package='control_one_motor_pkg',
+            executable='status_motor', 
+            name='stewart_ik_node',            
+            output='screen',                   
+            parameters=[{
+                'use_sim_time': False,         
+            }],
+        ),
+
     nodes = [
         control_node,
         robot_state_pub_node,
