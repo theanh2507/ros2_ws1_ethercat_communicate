@@ -1,0 +1,229 @@
+[0.018s] Invoking command in '/home/theanh/ros2_ws1/build/ethercat_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake /home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/ros2_ws1/install/ethercat_msgs
+[0.075s] -- The C compiler identification is GNU 11.4.0
+[0.131s] -- The CXX compiler identification is GNU 11.4.0
+[0.139s] -- Detecting C compiler ABI info
+[0.216s] -- Detecting C compiler ABI info - done
+[0.224s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.224s] -- Detecting C compile features
+[0.224s] -- Detecting C compile features - done
+[0.227s] -- Detecting CXX compiler ABI info
+[0.316s] -- Detecting CXX compiler ABI info - done
+[0.324s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.324s] -- Detecting CXX compile features
+[0.325s] -- Detecting CXX compile features - done
+[0.331s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.493s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.557s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.630s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.640s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.656s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.728s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.054s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.252s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.495s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.519s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.525s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.556s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.556s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.556s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.556s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.579s] -- Found PythonExtra: .so  
+[1.629s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.639s] -- Configuring done
+[1.670s] -- Generating done
+[1.681s] -- Build files have been written to: /home/theanh/ros2_ws1/build/ethercat_msgs
+[1.693s] Invoked command in '/home/theanh/ros2_ws1/build/ethercat_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake /home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/ros2_ws1/install/ethercat_msgs
+[1.695s] Invoking command in '/home/theanh/ros2_ws1/build/ethercat_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_msgs -- -j15 -l15
+[1.747s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.760s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.771s] [  5%] Built target ament_cmake_python_symlink_ethercat_msgs
+[2.092s] running egg_info
+[2.093s] creating ethercat_msgs.egg-info
+[2.093s] writing ethercat_msgs.egg-info/PKG-INFO
+[2.093s] writing dependency_links to ethercat_msgs.egg-info/dependency_links.txt
+[2.093s] writing top-level names to ethercat_msgs.egg-info/top_level.txt
+[2.094s] writing manifest file 'ethercat_msgs.egg-info/SOURCES.txt'
+[2.096s] reading manifest file 'ethercat_msgs.egg-info/SOURCES.txt'
+[2.096s] writing manifest file 'ethercat_msgs.egg-info/SOURCES.txt'
+[2.147s] [  5%] Built target ament_cmake_python_build_ethercat_msgs_egg
+[2.170s] [ 10%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_generator_c.dir/rosidl_generator_c/ethercat_msgs/srv/detail/get_sdo__functions.c.o[0m
+[2.171s] [ 10%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_generator_c.dir/rosidl_generator_c/ethercat_msgs/srv/detail/set_sdo__functions.c.o[0m
+[2.177s] [ 10%] Built target ethercat_msgs__cpp
+[2.193s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.193s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.194s] [ 17%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.250s] [ 20%] [32m[1mLinking C shared library libethercat_msgs__rosidl_generator_c.so[0m
+[2.322s] [ 20%] Built target ethercat_msgs__rosidl_generator_c
+[2.344s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.350s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.355s] [ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.642s] [ 30%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ethercat_msgs/srv/get_sdo__type_support.cpp.o[0m
+[2.653s] [ 33%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ethercat_msgs/srv/set_sdo__type_support.cpp.o[0m
+[2.655s] [ 35%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ethercat_msgs/srv/detail/get_sdo__type_support.cpp.o[0m
+[2.663s] [ 38%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ethercat_msgs/srv/detail/set_sdo__type_support.cpp.o[0m
+[2.707s] [ 41%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ethercat_msgs/srv/detail/dds_fastrtps/set_sdo__type_support.cpp.o[0m
+[2.715s] [ 43%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ethercat_msgs/srv/detail/dds_fastrtps/get_sdo__type_support.cpp.o[0m
+[2.806s] [ 46%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ethercat_msgs/srv/set_sdo__type_support.cpp.o[0m
+[2.812s] [ 48%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ethercat_msgs/srv/get_sdo__type_support.cpp.o[0m
+[2.896s] [ 51%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ethercat_msgs/srv/detail/get_sdo__type_support.c.o[0m
+[2.896s] [ 53%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ethercat_msgs/srv/detail/set_sdo__type_support.c.o[0m
+[2.929s] [ 56%] [32m[1mLinking CXX shared library libethercat_msgs__rosidl_typesupport_c.so[0m
+[3.018s] [ 58%] [32m[1mLinking C shared library libethercat_msgs__rosidl_typesupport_introspection_c.so[0m
+[3.088s] [ 58%] Built target ethercat_msgs__rosidl_typesupport_c
+[3.137s] [ 58%] Built target ethercat_msgs__rosidl_typesupport_introspection_c
+[3.152s] [ 61%] [32m[1mLinking CXX shared library libethercat_msgs__rosidl_typesupport_cpp.so[0m
+[3.191s] [ 64%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ethercat_msgs/srv/detail/set_sdo__type_support_c.cpp.o[0m
+[3.193s] [ 66%] [32mBuilding CXX object CMakeFiles/ethercat_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ethercat_msgs/srv/detail/get_sdo__type_support_c.cpp.o[0m
+[3.275s] [ 66%] Built target ethercat_msgs__rosidl_typesupport_cpp
+[3.286s] [ 69%] [32m[1mLinking CXX shared library libethercat_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[3.439s] [ 69%] Built target ethercat_msgs__rosidl_typesupport_introspection_cpp
+[3.472s] [ 71%] [32m[1mLinking CXX shared library libethercat_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.625s] [ 71%] Built target ethercat_msgs__rosidl_typesupport_fastrtps_cpp
+[3.683s] [ 74%] [32m[1mLinking CXX shared library libethercat_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.800s] [ 74%] Built target ethercat_msgs__rosidl_typesupport_fastrtps_c
+[3.831s] [ 74%] Built target ethercat_msgs
+[3.862s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.404s] [ 76%] Built target ethercat_msgs__py
+[4.434s] [ 79%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_generator_py.dir/rosidl_generator_py/ethercat_msgs/srv/_set_sdo_s.c.o[0m
+[4.436s] [ 82%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_generator_py.dir/rosidl_generator_py/ethercat_msgs/srv/_get_sdo_s.c.o[0m
+[4.572s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/ethercat_msgs/libethercat_msgs__rosidl_generator_py.so[0m
+[4.620s] [ 84%] Built target ethercat_msgs__rosidl_generator_py
+[4.650s] [ 87%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ethercat_msgs/_ethercat_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.651s] [ 89%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ethercat_msgs/_ethercat_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.653s] [ 92%] [32mBuilding C object CMakeFiles/ethercat_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ethercat_msgs/_ethercat_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[4.759s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.783s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.788s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.807s] [100%] Built target ethercat_msgs__rosidl_typesupport_introspection_c__pyext
+[4.832s] [100%] Built target ethercat_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.832s] [100%] Built target ethercat_msgs__rosidl_typesupport_c__pyext
+[4.848s] Invoked command in '/home/theanh/ros2_ws1/build/ethercat_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_msgs -- -j15 -l15
+[4.861s] Invoking command in '/home/theanh/ros2_ws1/build/ethercat_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_msgs
+[4.872s] -- Install configuration: ""
+[4.872s] -- Execute custom install script
+[4.872s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ament_index/resource_index/rosidl_interfaces/ethercat_msgs
+[4.885s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.897s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__functions.h
+[4.910s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__struct.h
+[4.923s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__type_support.h
+[4.936s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__functions.h
+[4.949s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__struct.h
+[4.962s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__type_support.h
+[4.975s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/get_sdo.h
+[4.988s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/set_sdo.h
+[5.002s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/library_path.sh
+[5.015s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/library_path.dsv
+[5.028s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.042s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__rosidl_typesupport_fastrtps_c.h
+[5.056s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__rosidl_typesupport_fastrtps_c.h
+[5.071s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.085s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__rosidl_typesupport_introspection_c.h
+[5.100s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__rosidl_typesupport_introspection_c.h
+[5.115s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.129s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__builder.hpp
+[5.144s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__struct.hpp
+[5.158s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__traits.hpp
+[5.170s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__type_support.hpp
+[5.182s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__builder.hpp
+[5.196s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__struct.hpp
+[5.209s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__traits.hpp
+[5.221s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__type_support.hpp
+[5.234s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/get_sdo.hpp
+[5.247s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/set_sdo.hpp
+[5.260s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.273s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__rosidl_typesupport_fastrtps_cpp.hpp
+[5.285s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__rosidl_typesupport_fastrtps_cpp.hpp
+[5.298s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/get_sdo__rosidl_typesupport_introspection_cpp.hpp
+[5.311s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/include/ethercat_msgs/ethercat_msgs/srv/detail/set_sdo__rosidl_typesupport_introspection_cpp.hpp
+[5.324s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/pythonpath.sh
+[5.338s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/pythonpath.dsv
+[5.351s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs-1.2.0-py3.10.egg-info/PKG-INFO
+[5.364s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs-1.2.0-py3.10.egg-info/SOURCES.txt
+[5.378s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs-1.2.0-py3.10.egg-info/dependency_links.txt
+[5.391s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs-1.2.0-py3.10.egg-info/top_level.txt
+[5.404s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/__init__.py
+[5.415s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/_ethercat_msgs_s.ep.rosidl_typesupport_c.c
+[5.427s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/_ethercat_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.439s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/_ethercat_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.452s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.464s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.477s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.490s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/libethercat_msgs__rosidl_generator_py.so
+[5.503s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/__init__.py
+[5.516s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/_get_sdo.py
+[5.529s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/_get_sdo_s.c
+[5.543s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/_set_sdo.py
+[5.556s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/_set_sdo_s.c
+[5.570s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.570s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.570s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/ethercat_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.570s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/SetSdo.idl
+[5.584s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/GetSdo.idl
+[5.597s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/SetSdo.srv
+[5.610s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/SetSdo_Request.msg
+[5.623s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/SetSdo_Response.msg
+[5.636s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/GetSdo.srv
+[5.650s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/GetSdo_Request.msg
+[5.663s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/srv/GetSdo_Response.msg
+[5.676s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ament_index/resource_index/package_run_dependencies/ethercat_msgs
+[5.689s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ament_index/resource_index/parent_prefix_path/ethercat_msgs
+[5.702s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/ament_prefix_path.sh
+[5.716s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/ament_prefix_path.dsv
+[5.729s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/path.sh
+[5.742s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/environment/path.dsv
+[5.755s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/local_setup.bash
+[5.768s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/local_setup.sh
+[5.781s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/local_setup.zsh
+[5.795s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/local_setup.dsv
+[5.809s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.dsv
+[5.823s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ament_index/resource_index/packages/ethercat_msgs
+[5.838s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/rosidl_cmake-extras.cmake
+[5.852s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.865s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.878s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.891s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.905s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.919s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.932s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgsConfig.cmake
+[5.946s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgsConfig-version.cmake
+[5.960s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/package.xml
+[5.972s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_generator_c.so
+[5.973s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_generator_c.so" to ""
+[5.973s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_fastrtps_c.so
+[5.974s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.974s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_introspection_c.so
+[5.974s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.974s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_c.so
+[5.975s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_c.so" to ""
+[5.975s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.976s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.976s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_introspection_cpp.so
+[5.976s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.976s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_cpp.so
+[5.977s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_typesupport_cpp.so" to ""
+[6.020s] Listing '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs'...
+[6.020s] Compiling '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/__init__.py'...
+[6.020s] Listing '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv'...
+[6.020s] Compiling '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/__init__.py'...
+[6.021s] Compiling '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/_get_sdo.py'...
+[6.021s] Compiling '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages/ethercat_msgs/srv/_set_sdo.py'...
+[6.026s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_generator_py.so
+[6.026s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_msgs/lib/libethercat_msgs__rosidl_generator_py.so" to ""
+[6.027s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_generator_cExport.cmake
+[6.027s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_generator_cExport-noconfig.cmake
+[6.027s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[6.027s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.027s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_introspection_cExport.cmake
+[6.028s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.028s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_cExport.cmake
+[6.028s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[6.028s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_generator_cppExport.cmake
+[6.028s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.029s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.029s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[6.029s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.029s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_cppExport.cmake
+[6.030s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/ethercat_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[6.030s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_generator_pyExport.cmake
+[6.030s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_msgs/share/ethercat_msgs/cmake/export_ethercat_msgs__rosidl_generator_pyExport-noconfig.cmake
+[6.034s] Invoked command in '/home/theanh/ros2_ws1/build/ethercat_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_msgs
