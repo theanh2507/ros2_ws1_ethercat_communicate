@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -31,17 +32,18 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout_18;
     QHBoxLayout *horizontalLayout_7;
-    QHBoxLayout *horizontalLayout_8;
     QHBoxLayout *horizontalLayout_5;
+    QVBoxLayout *verticalLayout_16;
     QVBoxLayout *verticalLayout;
+    QSpacerItem *verticalSpacer;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_5;
     QPushButton *pushButton_11;
     QPushButton *pushButton_6;
-    QSpacerItem *verticalSpacer_3;
-    QVBoxLayout *verticalLayout_8;
+    QSpacerItem *verticalSpacer_2;
     QVBoxLayout *verticalLayout_4;
     QPushButton *pushButton_8;
     QHBoxLayout *horizontalLayout_2;
@@ -62,7 +64,6 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
-    QSpacerItem *verticalSpacer;
     QVBoxLayout *verticalLayout_7;
     QPushButton *pushButton_7;
     QHBoxLayout *horizontalLayout_4;
@@ -80,12 +81,7 @@ public:
     QLineEdit *lineEdit_11;
     QLineEdit *lineEdit_12;
     QLineEdit *lineEdit_13;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *label_3;
-    QLineEdit *lineEdit_3;
     QPushButton *pushButton_9;
-    QSpacerItem *verticalSpacer_2;
-    QVBoxLayout *verticalLayout_13;
     QHBoxLayout *horizontalLayout_6;
     QVBoxLayout *verticalLayout_9;
     QPushButton *pushButton_17;
@@ -119,7 +115,30 @@ public:
     QLineEdit *lineEdit_17;
     QLineEdit *lineEdit_18;
     QLineEdit *lineEdit_19;
-    QSpacerItem *verticalSpacer_4;
+    QHBoxLayout *horizontalLayout_10;
+    QSpacerItem *horizontalSpacer;
+    QVBoxLayout *verticalLayout_17;
+    QHBoxLayout *horizontalLayout_9;
+    QHBoxLayout *horizontalLayout_3;
+    QVBoxLayout *verticalLayout_14;
+    QLabel *label_3;
+    QLabel *label_14;
+    QLabel *label_15;
+    QVBoxLayout *verticalLayout_8;
+    QDoubleSpinBox *doubleSpinBox;
+    QDoubleSpinBox *doubleSpinBox_2;
+    QDoubleSpinBox *doubleSpinBox_3;
+    QHBoxLayout *horizontalLayout_8;
+    QVBoxLayout *verticalLayout_13;
+    QLabel *label_16;
+    QLabel *label_17;
+    QLabel *label_18;
+    QVBoxLayout *verticalLayout_15;
+    QDoubleSpinBox *doubleSpinBox_4;
+    QDoubleSpinBox *doubleSpinBox_5;
+    QDoubleSpinBox *doubleSpinBox_6;
+    QPushButton *pushButton_21;
+    QSpacerItem *horizontalSpacer_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -130,19 +149,30 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1231, 368);
+        MainWindow->resize(1058, 472);
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        verticalLayout_18 = new QVBoxLayout();
+        verticalLayout_18->setObjectName(QString::fromUtf8("verticalLayout_18"));
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        verticalLayout_16 = new QVBoxLayout();
+        verticalLayout_16->setObjectName(QString::fromUtf8("verticalLayout_16"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
@@ -168,18 +198,16 @@ public:
 
         verticalLayout->addWidget(pushButton_6);
 
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout->addItem(verticalSpacer_3);
+        verticalLayout_16->addLayout(verticalLayout);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_16->addItem(verticalSpacer_2);
 
 
-        horizontalLayout_5->addLayout(verticalLayout);
+        horizontalLayout_5->addLayout(verticalLayout_16);
 
-
-        horizontalLayout_8->addLayout(horizontalLayout_5);
-
-        verticalLayout_8 = new QVBoxLayout();
-        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         pushButton_8 = new QPushButton(centralwidget);
@@ -278,17 +306,7 @@ public:
         verticalLayout_4->addLayout(horizontalLayout);
 
 
-        verticalLayout_8->addLayout(verticalLayout_4);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_8->addItem(verticalSpacer);
-
-
-        horizontalLayout_8->addLayout(verticalLayout_8);
-
-
-        horizontalLayout_7->addLayout(horizontalLayout_8);
+        horizontalLayout_5->addLayout(verticalLayout_4);
 
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
@@ -372,40 +390,17 @@ public:
 
         verticalLayout_7->addLayout(horizontalLayout_4);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label_3 = new QLabel(centralwidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-
-        horizontalLayout_3->addWidget(label_3);
-
-        lineEdit_3 = new QLineEdit(centralwidget);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(1);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(lineEdit_3->sizePolicy().hasHeightForWidth());
-        lineEdit_3->setSizePolicy(sizePolicy);
-
-        horizontalLayout_3->addWidget(lineEdit_3);
-
-
-        verticalLayout_7->addLayout(horizontalLayout_3);
-
         pushButton_9 = new QPushButton(centralwidget);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
 
         verticalLayout_7->addWidget(pushButton_9);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_7->addItem(verticalSpacer_2);
+        horizontalLayout_5->addLayout(verticalLayout_7);
 
 
-        horizontalLayout_7->addLayout(verticalLayout_7);
+        horizontalLayout_7->addLayout(horizontalLayout_5);
 
-        verticalLayout_13 = new QVBoxLayout();
-        verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         verticalLayout_9 = new QVBoxLayout();
@@ -577,22 +572,154 @@ public:
         horizontalLayout_6->setStretch(2, 1);
         horizontalLayout_6->setStretch(3, 1);
 
-        verticalLayout_13->addLayout(horizontalLayout_6);
-
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_13->addItem(verticalSpacer_4);
+        horizontalLayout_7->addLayout(horizontalLayout_6);
 
 
-        horizontalLayout_7->addLayout(verticalLayout_13);
+        verticalLayout_18->addLayout(horizontalLayout_7);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer);
+
+        verticalLayout_17 = new QVBoxLayout();
+        verticalLayout_17->setObjectName(QString::fromUtf8("verticalLayout_17"));
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        verticalLayout_14 = new QVBoxLayout();
+        verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        verticalLayout_14->addWidget(label_3);
+
+        label_14 = new QLabel(centralwidget);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+
+        verticalLayout_14->addWidget(label_14);
+
+        label_15 = new QLabel(centralwidget);
+        label_15->setObjectName(QString::fromUtf8("label_15"));
+
+        verticalLayout_14->addWidget(label_15);
 
 
-        gridLayout->addLayout(horizontalLayout_7, 0, 0, 1, 1);
+        horizontalLayout_3->addLayout(verticalLayout_14);
+
+        verticalLayout_8 = new QVBoxLayout();
+        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
+        doubleSpinBox = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox->setObjectName(QString::fromUtf8("doubleSpinBox"));
+        doubleSpinBox->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        doubleSpinBox->setMinimum(-250.000000000000000);
+        doubleSpinBox->setMaximum(250.000000000000000);
+
+        verticalLayout_8->addWidget(doubleSpinBox);
+
+        doubleSpinBox_2 = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_2->setObjectName(QString::fromUtf8("doubleSpinBox_2"));
+        doubleSpinBox_2->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        doubleSpinBox_2->setMinimum(-250.000000000000000);
+        doubleSpinBox_2->setMaximum(250.000000000000000);
+
+        verticalLayout_8->addWidget(doubleSpinBox_2);
+
+        doubleSpinBox_3 = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_3->setObjectName(QString::fromUtf8("doubleSpinBox_3"));
+        doubleSpinBox_3->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        doubleSpinBox_3->setMinimum(-190.000000000000000);
+        doubleSpinBox_3->setMaximum(200.000000000000000);
+
+        verticalLayout_8->addWidget(doubleSpinBox_3);
+
+
+        horizontalLayout_3->addLayout(verticalLayout_8);
+
+
+        horizontalLayout_9->addLayout(horizontalLayout_3);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        verticalLayout_13 = new QVBoxLayout();
+        verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
+        label_16 = new QLabel(centralwidget);
+        label_16->setObjectName(QString::fromUtf8("label_16"));
+
+        verticalLayout_13->addWidget(label_16);
+
+        label_17 = new QLabel(centralwidget);
+        label_17->setObjectName(QString::fromUtf8("label_17"));
+
+        verticalLayout_13->addWidget(label_17);
+
+        label_18 = new QLabel(centralwidget);
+        label_18->setObjectName(QString::fromUtf8("label_18"));
+
+        verticalLayout_13->addWidget(label_18);
+
+
+        horizontalLayout_8->addLayout(verticalLayout_13);
+
+        verticalLayout_15 = new QVBoxLayout();
+        verticalLayout_15->setObjectName(QString::fromUtf8("verticalLayout_15"));
+        doubleSpinBox_4 = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_4->setObjectName(QString::fromUtf8("doubleSpinBox_4"));
+        doubleSpinBox_4->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        doubleSpinBox_4->setMinimum(-20.000000000000000);
+        doubleSpinBox_4->setMaximum(20.000000000000000);
+
+        verticalLayout_15->addWidget(doubleSpinBox_4);
+
+        doubleSpinBox_5 = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_5->setObjectName(QString::fromUtf8("doubleSpinBox_5"));
+        doubleSpinBox_5->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        doubleSpinBox_5->setMinimum(-20.000000000000000);
+        doubleSpinBox_5->setMaximum(20.000000000000000);
+
+        verticalLayout_15->addWidget(doubleSpinBox_5);
+
+        doubleSpinBox_6 = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_6->setObjectName(QString::fromUtf8("doubleSpinBox_6"));
+        doubleSpinBox_6->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        doubleSpinBox_6->setMinimum(-60.000000000000000);
+        doubleSpinBox_6->setMaximum(60.000000000000000);
+
+        verticalLayout_15->addWidget(doubleSpinBox_6);
+
+
+        horizontalLayout_8->addLayout(verticalLayout_15);
+
+
+        horizontalLayout_9->addLayout(horizontalLayout_8);
+
+
+        verticalLayout_17->addLayout(horizontalLayout_9);
+
+        pushButton_21 = new QPushButton(centralwidget);
+        pushButton_21->setObjectName(QString::fromUtf8("pushButton_21"));
+
+        verticalLayout_17->addWidget(pushButton_21);
+
+
+        horizontalLayout_10->addLayout(verticalLayout_17);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_2);
+
+
+        verticalLayout_18->addLayout(horizontalLayout_10);
+
+
+        gridLayout->addLayout(verticalLayout_18, 0, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1231, 22));
+        menubar->setGeometry(QRect(0, 0, 1058, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -636,7 +763,6 @@ public:
         label_11->setText(QCoreApplication::translate("MainWindow", "Pos4", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Pos5", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "Pos6", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "t", nullptr));
         pushButton_9->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         pushButton_17->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
         pushButton_10->setText(QCoreApplication::translate("MainWindow", "Motor1", nullptr));
@@ -648,6 +774,13 @@ public:
         pushButton_20->setText(QCoreApplication::translate("MainWindow", "Mode", nullptr));
         pushButton_19->setText(QCoreApplication::translate("MainWindow", "Current Vel", nullptr));
         pushButton_18->setText(QCoreApplication::translate("MainWindow", "Current Position", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
+        label_15->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));
+        label_16->setText(QCoreApplication::translate("MainWindow", "Roll", nullptr));
+        label_17->setText(QCoreApplication::translate("MainWindow", "Pitch", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "Yaw", nullptr));
+        pushButton_21->setText(QCoreApplication::translate("MainWindow", "Run", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
         toolBar_2->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar_2", nullptr));
         toolBar_3->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar_3", nullptr));

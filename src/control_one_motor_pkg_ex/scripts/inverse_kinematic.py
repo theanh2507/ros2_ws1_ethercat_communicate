@@ -8,6 +8,8 @@ from rclpy.node import Node
 from sensor_msgs.msg import JointState
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from builtin_interfaces.msg import Duration
+from std_msgs.msg import Float64MultiArray
+
 
 class Kinematics(Node):
     def __init__(self):
@@ -21,19 +23,20 @@ class Kinematics(Node):
         self.LEAD_SCREW_MM = 5.0      # 5 mm
         self.PULSE_TO_MM = self.LEAD_SCREW_MM / self.PULSE_PER_REV
 
-        self.L_HOME = 30.0            # mm
-        self.L_LEG = 1012.0           # 930 + 54
-        self.Z_OFFSET = 200           # mm
+        self.L_HOME = 30.0                      # mm
+        # self.L_LEG = 1042.0                   # 930 + 54
+        self.L_LEG = 1016.7178                  # do dai xy lanh giua 2 mp base va plat khi Z=982 (da bao gom 30mm di ra)
+        # self.L_LEG = 1002.27
+        self.Z_OFFSET = 982.0 + 173.5947        # Z_OFFSET = 982 + 173.5947 (982: z home) (khi do xy lanh di ra 20cm)
 
         self.circle_points = []
-        self.current_point_idx = 0
         self.is_running_circle = False
 
 
         self.RADIUS_BASE = 500      
         self.RADIUS_PLATFROM = 350
 
-        self.TIME_TRAJECTORY = 0
+        self.TIME_TRAJECTORY = 0.01
 
         self.received_first_state = False
 
@@ -42,6 +45,8 @@ class Kinematics(Node):
             '/joint_states',
             self.joint_state_callback,
             10)
+
+        # self.subscriptionPose = self.create_subscription(Float64MultiArray, 'pos_and_rotate_angle_topic', self.subPoseCallBack, 10)
         
         self.get_logger().info('Inverse Kinematic Node has been started and listening to /joint_states')
 
@@ -50,9 +55,6 @@ class Kinematics(Node):
             '/trajectory_controller/joint_trajectory', 
             10)
         
-        self.timer = None
-        self.timer = self.create_timer(1.0, self.control_loop)
-        
         self.rB = 500.0  # mm
         self.rP = 350.0  # mm
         self.phiB = np.radians(15.0)
@@ -60,10 +62,10 @@ class Kinematics(Node):
 
         def get_coords_base(r, angles):
             return np.array([[r * np.cos(a), r * np.sin(a), 0] for a in angles])
-        
 
+        # Z = 0 Local Coordinates
         def get_coords_platfrom(r, angles):
-            return np.array([[r * np.cos(a), r * np.sin(a), 982] for a in angles])
+            return np.array([[r * np.cos(a), r * np.sin(a), 0] for a in angles])
 
 
         base_angles = [
@@ -83,23 +85,27 @@ class Kinematics(Node):
         self.P_coords = get_coords_platfrom(self.rP, plat_angles)
         self.get_logger().info(f'P_coords: {self.P_coords}')
 
+        self.timer = None
+        ########################
+        # target_T = np.array([0.0, 0.0, self.Z_OFFSET + 0.0])
+        # target_R = self.get_rotation_matrix(0.0, 0.0, 0.0)
+        # self.timer = self.create_timer(1.0, lambda: self.control_loop(target_T, target_R))
 
         ########################
+        # self.trajectory_circle(radius=100.0, target_velocity=20.0, points = 20.0)
 
-        # self.trajectory_circle(radius=150.0, target_velocity=30.0, points = 200.0)
-        # self.timer = None
+        ########################
+        # kiem tra cho nhan duoc du lieu cua joint state
+        self.init_timer = self.create_timer(0.5, self.wait_for_motors_start)
 
-        # self.init_timer = self.create_timer(0.5, self.wait_for_motors_and_start)
-
-    def wait_for_motors_and_start(self):
-        # kiem cho cho nhan duoc du lieu cua joint state
+    def wait_for_motors_start(self):
         if not hasattr(self, 'received_first_state') or not self.received_first_state:
             self.get_logger().warn('Dang doi du lieu tu motor (JointState)...', throttle_duration_sec=2.0)
             return
 
         self.init_timer.cancel()
         self.get_logger().info('Da nhan du lieu motor. Bat dau tinh toan quy dao...')
-        self.trajectory_circle(radius=100.0, target_velocity=30.0, points=300.0)
+        self.trajectory_circle(radius=150.0, target_velocity=30.0)
 
     def joint_state_callback(self, msg):
         if not self.joint_names:
@@ -116,24 +122,32 @@ class Kinematics(Node):
                     self.received_first_state = True
             except (ValueError, IndexError):
                 continue
-        self.received_first_state = True
 
         # self.get_logger().info(f'Joint Position: {self.joint_positions}')
+
+    def subPoseCallBack(self, msg):
+        target_T = np.array([msg.data[0], msg.data[1], self.Z_OFFSET + msg.data[2]])
+        target_R = self.get_rotation_matrix(msg.data[3], msg.data[4], msg.data[5])
+        self.control_loop(target_T, target_R)
     
     def get_rotation_matrix(self, roll, pitch, yaw):
         # xoay quanh x
+        safe_roll  = np.clip(roll,  -20.0, 20.0)
+        safe_pitch = np.clip(pitch, -20.0, 20.0)
+        safe_yaw   = np.clip(yaw,   -60.0, 60.0)
+    
         Rx = np.array([[1, 0, 0],
-                   [0, np.cos(np.radians(roll)), -np.sin(np.radians(roll))],
-                   [0, np.sin(np.radians(roll)), np.cos(np.radians(roll))]])
+                   [0, np.cos(np.radians(safe_roll)), -np.sin(np.radians(safe_roll))],
+                   [0, np.sin(np.radians(safe_roll)), np.cos(np.radians(safe_roll))]])
         
         # xoay quanh y
-        Ry = np.array([[np.cos(np.radians(pitch)), 0, np.sin(np.radians(pitch))],
+        Ry = np.array([[np.cos(np.radians(safe_pitch)), 0, np.sin(np.radians(safe_pitch))],
                     [0, 1, 0],
-                    [-np.sin(np.radians(pitch)), 0, np.cos(np.radians(pitch))]])
+                    [-np.sin(np.radians(safe_pitch)), 0, np.cos(np.radians(safe_pitch))]])
         
         # xoay quanh z
-        Rz = np.array([[np.cos(np.radians(yaw)), -np.sin(np.radians(yaw)), 0],
-                    [np.sin(np.radians(yaw)), np.cos(np.radians(yaw)), 0],
+        Rz = np.array([[np.cos(np.radians(safe_yaw)), -np.sin(np.radians(safe_yaw)), 0],
+                    [np.sin(np.radians(safe_yaw)), np.cos(np.radians(safe_yaw)), 0],
                     [0, 0, 1]])
         
         return Rz @ Ry @ Rx
@@ -155,10 +169,8 @@ class Kinematics(Node):
         return np.array(leg_lengths)
         
 
-    def control_loop(self):
-
-        target_T = np.array([0.0, 0.0, self.Z_OFFSET + 0.0])
-        target_R = self.get_rotation_matrix(0, 0.0, 0)
+    def control_loop(self, target_T, target_R):
+                            
         self.get_logger().info(f'Ma tran xoay la: {target_R}')
 
         lengths_mm = self.calculate_inverse_kinematics(target_T, target_R)
@@ -166,7 +178,7 @@ class Kinematics(Node):
         
         if lengths_mm is not None:
             lengths_mm= [
-                (l - self.L_HOME - self.L_LEG) for l in lengths_mm]
+                (l - self.L_LEG) for l in lengths_mm]
             
             formatted_lengths = [f"{l:.4f}" for l in lengths_mm]
             self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
@@ -175,16 +187,17 @@ class Kinematics(Node):
 
             self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
 
-            self.publish_trajectory(lengths_mm)
+            self.publish_trajectory(lengths_mm, duration=5)
 
-            self.timer.cancel()
+            if self.timer is not None:
+                self.timer.cancel()
 
     
     def mm_to_pulse(self, target_position):
         self.target_pulse = (-target_position) / self.PULSE_TO_MM
         return self.target_pulse
 
-    def publish_trajectory(self, lengths):
+    def publish_trajectory(self, lengths, duration):
         msg = JointTrajectory()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.joint_names = [f'joint_{i+1}' for i in range(6)]
@@ -197,7 +210,7 @@ class Kinematics(Node):
         
         point.velocities = [0.0] * 6
         
-        point.time_from_start = Duration(sec=5, nanosec=0) 
+        point.time_from_start = Duration(sec=duration, nanosec=0) 
 
         msg.points.append(point)
     
@@ -206,17 +219,61 @@ class Kinematics(Node):
         self.get_logger().info(f'Target Pulse 6 Joint : {point.positions}')
 
 
-    def generate_trajectory(self, radius, target_velocity, points_count):
+    # def trajectory_circle(self, radius, target_velocity):
+    #     self.circle_points = self.generate_trajectory_circle(radius, target_velocity)
+    #     self.current_point_idx = 0
+    #     self.is_running_circle = True
+
+    #     if self.timer is not None:
+    #         self.timer.cancel()
+    #         self.destroy_timer(self.timer)
+
+    #     self.timer = self.create_timer(self.dt, self.run_trajectory)
+
+    def trajectory_circle(self, radius, target_velocity):
+
+        self.circle_points= self.generate_trajectory_circle(radius, target_velocity)
+        
+        self.get_logger().info(f'quy dao: R={radius}, V={target_velocity}, dt={self.TIME_TRAJECTORY:.4f}s ---')
+
+        # lay toa do diem dau tien quy dao moi [x, y, z, r, p, y]
+        first_pose = self.circle_points[0]['pos']
+
+        # di chuyen ve diem dau tien
+        self.move_to_start_point(first_pose, duration = 5)
+        
+        if self.timer is not None:
+            self.timer.cancel()
+            self.destroy_timer(self.timer)
+            self.timer = None
+
+        self.get_logger().info('Dang doi 5s cho robot di chuyen den Start Point...')
+        self.start_delay_timer = self.create_timer(5.0, self.activate_circle_timer)
+
+    def activate_circle_timer(self):
+ 
+        self.start_delay_timer.cancel()
+        
+        self.get_logger().info('Da den Start Point. Bat dau chay quy dao')
+        self.current_point_idx = 0
+        self.is_running_circle = True
+        # sau thoi gian 5s (duration) bat dau chay quy dao
+        self.timer = self.create_timer(self.TIME_TRAJECTORY, self.run_trajectory)               # 50Hz
+
+
+    def generate_trajectory_circle(self, radius, target_velocity):
         duration = (2 * math.pi * radius) / target_velocity
         self.get_logger().info(f'thoi gian hoan thanh 1 quy dao la: {duration}')
 
         if duration < 5.0: duration = 5.0 
         
         trajectory = []
-        dt = duration / points_count
 
-        for i in range(int(points_count)):
-            t = i * dt
+        point_count_test = duration / self.TIME_TRAJECTORY
+        self.get_logger().info(f'so point la: {point_count_test}')
+
+        for i in range(int(point_count_test)):
+            t = i * self.TIME_TRAJECTORY                             # thoi gian di den diem thu i 
             theta = (2 * math.pi * t) / duration
             
             x = radius * math.cos(theta)
@@ -224,131 +281,74 @@ class Kinematics(Node):
             z = self.Z_OFFSET
             
             trajectory.append({
-                'pos': [x, y, z, 0.0, 0.0, 0.0], 
-                'time_step': dt
+                'pos': [x, y, z, 0.0, 0.0, 0.0]
             })
-        return trajectory, dt
+        return trajectory
     
 
-    def trajectory_circle(self, radius, target_velocity, points):
-        self.circle_points, self.dt = self.generate_trajectory(radius, target_velocity, points)
-        self.current_point_idx = 0
-        self.is_running_circle = True
+    def move_to_start_point(self, target_positon, duration):
+        target_T = np.array([target_positon[0], target_positon[1], target_positon[2]])
+        target_R = self.get_rotation_matrix(target_positon[3], target_positon[4], target_positon[5])
 
-        if self.timer is not None:
-            self.timer.cancel()
-            self.destroy_timer(self.timer)
-
-        self.timer = self.create_timer(self.dt, self.run_trajectory)
-
-    # def trajectory_circle(self, radius, target_velocity, points):
-
-    #     self.circle_points, self.dt = self.generate_trajectory(radius, target_velocity, int(points))
+        lengths_mm = self.calculate_inverse_kinematics(target_T, target_R)
+        # self.get_logger().info(f'Gia tri do dai xy lanh tinh tu 2 mp base va plat: {[round(float(l), 4) for l in lengths_mm]}')
         
-    #     self.get_logger().info(f'quy dao: R={radius}, V={target_velocity}, dt={self.dt:.4f}s ---')
-
-    #     # lay toa do diem dau tien quy dao moi [x, y, z, r, p, y]
-    #     first_pose = self.circle_points[0]['pos']
-
-    #     # di chuyen ve diem dau tien
-    #     self.move_to_start_point(first_pose, duration=5.0)
-
-    #     self.is_running_circle = True
-
-    #     if self.timer is not None:
-    #         self.timer.cancel()
-    #         self.destroy_timer(self.timer)
-    #         self.timer = None
-
-    #     self.get_logger().info('Bat dau chay quy dao moi...')
-    #     self.timer = self.create_timer(self.dt, self.run_trajectory)
-
-    
-    def get_current_leg_lengths_mm(self):
-        self.get_logger().info(f'vi tri hien tai: {self.joint_positions}')
-        return [float(p * self.PULSE_TO_MM) for p in self.joint_positions]
-    
-    def move_to_start_point(self, target_pose, duration):
-        self.get_logger().info('bat dau di chuyen ve diem start point cua quy dao')
-
-        # tinh do dai chan muc tieu diem bat dau quy dao
-        T = np.array([target_pose[0], target_pose[1], target_pose[2]])
-        R = self.get_rotation_matrix(target_pose[3], target_pose[4], target_pose[5])
-        target_lengths = self.calculate_inverse_kinematics(T, R)
-
-        # do dai cua xy lanh can di chuyen tinh tu home
-        target_deltas = [l - self.L_LEG - self.L_HOME for l in target_lengths]
-
-        # lay do dai hien tai
-        start_deltas = self.get_current_leg_lengths_mm()
-        start_deltas = [l + self.L_HOME for l in start_deltas]
-        self.get_logger().info(f'do dai hien tai: {start_deltas}')
-
-        steps = 50
-        dt = duration / steps
-
-        for i in range(steps):
-            alpha = i / steps
-
-            current_step_deltas = [
-                start_deltas[j] + alpha * (target_deltas[j] - start_deltas[j])
-                for j in range(6)
-            ]
-
-            msg = JointTrajectory()
-            msg.header.stamp = self.get_clock().now().to_msg()
-            msg.joint_names = [f'joint_{k+1}' for k in range(6)]
+        if lengths_mm is not None:
+            lengths_mm= [
+                (l - self.L_LEG) for l in lengths_mm]
             
-            point = JointTrajectoryPoint()
-            safe_deltas = [np.clip(d, -20.0, 370.0) for d in current_step_deltas]
-            point.positions = [float(self.mm_to_pulse(d)) for d in safe_deltas]
-            
-            point.time_from_start = Duration(sec=0, nanosec=int(dt * 2.0 * 1e9)) 
-            
-            msg.points.append(point)
-            self.publisher_.publish(msg)
+            formatted_lengths = [f"{l:.4f}" for l in lengths_mm]
+            # self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
+        
+            real_cylinder_lengths = [f"{l + self.L_HOME :.4f}" for l in lengths_mm]
 
-            time.sleep(dt)
-
-        self.get_logger().info('Đã đến điểm bắt đầu an toàn.')
-
+            # self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
+            self.get_logger().info("bat dau di chuyen den diem start point")
+            self.publish_trajectory(lengths_mm, duration)
 
     def run_trajectory(self):
         if(not self.is_running_circle):
-            self.trajectory_circle()
+            self.trajectory_circle(radius=100.0, target_velocity=30.0)
             return
 
-        if self.current_point_idx >= len(self.circle_points):
+        if self.current_point_idx + 1 >= len(self.circle_points):
             self.get_logger().info('hoan thanh')
+            self.current_point_idx = 0
 
             self.get_logger().info(f'toa do hien tai la: {self.joint_positions}')
             self.is_running_circle = False
 
-            if self.timer is not None:
-                self.timer.cancel()
-                self.timer = None
-                return
-        
+            # huy timer de chay 1 lan 
+            # if self.timer is not None:
+            #     self.timer.cancel()
+            #     self.timer = None
+            #     return
+            
         p = self.circle_points[self.current_point_idx]
-        dt = self.dt
+
+        roll  = np.clip(p['pos'][3], -20.0, 20.0)
+        pitch = np.clip(p['pos'][4], -20.0, 20.0)
+        yaw   = np.clip(p['pos'][5], -60.0, 60.0)
         
         target_T = np.array([p['pos'][0], p['pos'][1], p['pos'][2]])
-        target_R = self.get_rotation_matrix(p['pos'][3], p['pos'][4], p['pos'][5])
+        target_R = self.get_rotation_matrix(roll, pitch, yaw)
         lengths_mm = self.calculate_inverse_kinematics(target_T, target_R)
 
+
         if lengths_mm is not None:
-            delta_mm = [l - self.L_LEG - self.L_HOME for l in lengths_mm]
+            delta_mm = [l - self.L_LEG for l in lengths_mm]
+
+            safe_lengths = [np.clip(l, -20.0, 370.0) for l in delta_mm]
 
             msg = JointTrajectory()
             msg.header.stamp = self.get_clock().now().to_msg()
             msg.joint_names = [f'joint_{i+1}' for i in range(6)]
             
             point = JointTrajectoryPoint()
-            point.positions = [float(self.mm_to_pulse(l)) for l in delta_mm]
+            point.positions = [float(self.mm_to_pulse(l)) for l in safe_lengths]
             point.velocities = []
 
-            buffer = 1.2
-            nanosecs = int(dt * buffer * 1e9)
+            nanosecs = int(self.TIME_TRAJECTORY * 1 *1e9)
 
             point.time_from_start = Duration(
             sec=int(nanosecs // 1e9), 

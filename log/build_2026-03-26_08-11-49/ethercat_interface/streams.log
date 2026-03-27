@@ -1,0 +1,36 @@
+[0.097s] Invoking command in '/home/theanh/ros2_ws1/build/ethercat_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_interface -- -j15 -l15
+[2.173s] [ 22%] Built target gmock_main
+[2.181s] [ 44%] Built target ethercat_interface
+[2.184s] [ 77%] Built target gmock
+[2.274s] [100%] Built target test_ec_pdo_channel_manager
+[2.285s] Invoked command in '/home/theanh/ros2_ws1/build/ethercat_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_interface -- -j15 -l15
+[2.331s] Invoking command in '/home/theanh/ros2_ws1/build/ethercat_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_interface
+[2.340s] -- Install configuration: ""
+[2.419s] -- Execute custom install script
+[2.446s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/lib/libethercat_interface.so
+[2.469s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/include/ethercat_interface/ec_master.hpp
+[2.469s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/include/ethercat_interface/ec_pdo_channel_manager.hpp
+[2.469s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/include/ethercat_interface/ec_sdo_manager.hpp
+[2.470s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/include/ethercat_interface/ec_slave.hpp
+[2.471s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/include/ethercat_interface/ec_sync_manager.hpp
+[2.471s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/environment/library_path.sh
+[2.471s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/environment/library_path.dsv
+[2.472s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ament_index/resource_index/package_run_dependencies/ethercat_interface
+[2.520s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ament_index/resource_index/parent_prefix_path/ethercat_interface
+[2.542s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/environment/ament_prefix_path.sh
+[2.543s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/environment/ament_prefix_path.dsv
+[2.564s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/environment/path.sh
+[2.565s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/environment/path.dsv
+[2.565s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/local_setup.bash
+[2.566s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/local_setup.sh
+[2.566s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/local_setup.zsh
+[2.567s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/local_setup.dsv
+[2.567s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.dsv
+[2.594s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ament_index/resource_index/packages/ethercat_interface
+[2.616s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.642s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[2.654s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.655s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/cmake/ethercat_interfaceConfig.cmake
+[2.656s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/cmake/ethercat_interfaceConfig-version.cmake
+[2.656s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/package.xml
+[2.664s] Invoked command in '/home/theanh/ros2_ws1/build/ethercat_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_interface

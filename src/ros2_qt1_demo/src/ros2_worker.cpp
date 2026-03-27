@@ -48,7 +48,7 @@ void ROS2Worker::publishPosition(double p1, double p2, double p3, double p4, dou
     point.positions.push_back(p5);
     point.positions.push_back(p6);
 
-    point.time_from_start.sec = 4; 
+    point.time_from_start.sec = 5; 
     point.time_from_start.nanosec = 0;
 
     message.points.push_back(point);

@@ -59,9 +59,9 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     connect(displayStatusMotor, &DisplayStatusMotor::jointDataReceiveDynamic, this, [this](int index, int status, int mode){
-        QString nameMode = (mode == 9) ? "Velocity Mode" : 
-                        (mode == 8) ? "Position Mode" : 
-                        (mode == 6) ? "Homing Mode"   : "Unknown";
+        QString nameMode = (mode == 9) ? "Vel Mode" : 
+                           (mode == 8) ? "Pos Mode" : 
+                           (mode == 6) ? "Home Mode"   : "Unknown";
 
         bool servoOn = (status & 0x0004); // Bit 2
         bool fault   = (status & 0x0008); // Bit 3
@@ -101,6 +101,13 @@ MainWindow::MainWindow(QWidget *parent)
     // publishVelHomeToRos = nodePubVelHome->create_publisher<std_msgs::msg::Float64MultiArray>("homing_manager_topic", 10);
     connect(ui->pushButton_11, &QPushButton::clicked, this, &MainWindow::sendVelHomeToRos);
 
+
+    // send position and rotate angel
+    nodeMoveToPositions = rclcpp::Node::make_shared("target_pose_node");
+    publishPose = nodeMoveToPositions->create_publisher<std_msgs::msg::Float64MultiArray>("pos_and_rotate_angle_topic", 10);
+    connect(ui->pushButton_21, &QPushButton::clicked, this, &MainWindow::sendPose);
+
+
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::onButtonClicked);
 
     //Velocity Mode
@@ -126,12 +133,7 @@ MainWindow::MainWindow(QWidget *parent)
             QThread::msleep(80);
         }
     });
-
-
-    // change mode of operation
-    // connect(ui->pushButton_8, &QPushButton::clicked, this, [this](){ modeOfOperation(9); }); // Cyclic Synchronous Position (CSV)
-    // connect(ui->pushButton_7, &QPushButton::clicked, this, [this](){ modeOfOperation(8); }); // Profile Position Mode
-
+    
     // Jogging buttons
     connect(ui->pushButton_3, &QPushButton::pressed, this, &MainWindow::jogPDirection);
     connect(ui->pushButton_3, &QPushButton::released, this, &MainWindow::stopMotor);
@@ -383,5 +385,19 @@ void MainWindow::sendVelHomeToRos() {
     } else {
         qDebug() << "dang chay homing...";
     }
+}
+
+void MainWindow::sendPose()
+{
+    float X = ui->doubleSpinBox->text().toDouble();
+    float Y = ui->doubleSpinBox_2->text().toDouble();
+    float Z = ui->doubleSpinBox_3->text().toDouble();
+    float Roll = ui->doubleSpinBox_4->text().toDouble();
+    float Pitch = ui->doubleSpinBox_5->text().toDouble();
+    float Yaw = ui->doubleSpinBox_6->text().toDouble();
+
+    auto msg = std_msgs::msg::Float64MultiArray();
+    msg.data = {X, Y, Z, Roll, Pitch, Yaw};
+    publishPose->publish(msg);
 }
 

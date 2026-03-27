@@ -51,6 +51,9 @@ private:
     std::shared_ptr<rclcpp::Node> nodeMode;
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisherMode;
 
+    std::shared_ptr<rclcpp::Node> nodeMoveToPositions;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publishPose;
+
 
     void onButtonClicked();
     void startServiceEtherCAT();
@@ -72,5 +75,7 @@ private:
     void moveToPosition();
 
     void sendVelHomeToRos();
+
+    void sendPose();
 };
 #endif // MAINWINDOW_H
