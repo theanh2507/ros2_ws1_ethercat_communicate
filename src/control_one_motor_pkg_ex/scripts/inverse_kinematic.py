@@ -15,9 +15,9 @@ class Kinematics(Node):
     def __init__(self):
         super().__init__('inverse_kinematic_node')
         
+        self.joint_names = []
         self.joint_positions = [0.0] * 6
         self.joint_velocities = [0.0] * 6
-        self.joint_names = []
 
         self.PULSE_PER_REV = 10000.0  # 10000 xung
         self.LEAD_SCREW_MM = 5.0      # 5 mm
@@ -36,7 +36,7 @@ class Kinematics(Node):
         self.RADIUS_BASE = 500      
         self.RADIUS_PLATFROM = 350
 
-        self.TIME_TRAJECTORY = 0.01
+        self.TIME_TRAJECTORY = 0.01             # 100 Hz
 
         self.received_first_state = False
 
@@ -46,9 +46,10 @@ class Kinematics(Node):
             self.joint_state_callback,
             10)
 
-        # self.subscriptionPose = self.create_subscription(Float64MultiArray, 'pos_and_rotate_angle_topic', self.subPoseCallBack, 10)
+        # nhan pose gui tu qt
+        self.subscriptionPose = self.create_subscription(Float64MultiArray, 'pos_and_rotate_angle_topic', self.subPoseCallBack, 10)
         
-        self.get_logger().info('Inverse Kinematic Node has been started and listening to /joint_states')
+        # self.get_logger().info('Inverse Kinematic Node has been started and listening to /joint_states')
 
         self.publisher_ = self.create_publisher(
             JointTrajectory, 
@@ -96,7 +97,7 @@ class Kinematics(Node):
 
         ########################
         # kiem tra cho nhan duoc du lieu cua joint state
-        self.init_timer = self.create_timer(0.5, self.wait_for_motors_start)
+        # self.init_timer = self.create_timer(0.5, self.wait_for_motors_start)
 
     def wait_for_motors_start(self):
         if not hasattr(self, 'received_first_state') or not self.received_first_state:
@@ -105,7 +106,7 @@ class Kinematics(Node):
 
         self.init_timer.cancel()
         self.get_logger().info('Da nhan du lieu motor. Bat dau tinh toan quy dao...')
-        self.trajectory_circle(radius=150.0, target_velocity=30.0)
+        self.trajectory_circle(radius=100.0, target_velocity=100.0)
 
     def joint_state_callback(self, msg):
         if not self.joint_names:
@@ -174,18 +175,18 @@ class Kinematics(Node):
         self.get_logger().info(f'Ma tran xoay la: {target_R}')
 
         lengths_mm = self.calculate_inverse_kinematics(target_T, target_R)
-        self.get_logger().info(f'Gia tri do dai xy lanh tinh tu 2 mp base va plat: {[round(float(l), 4) for l in lengths_mm]}')
+        # self.get_logger().info(f'Gia tri do dai xy lanh tinh tu 2 mp base va plat: {[round(float(l), 4) for l in lengths_mm]}')
         
         if lengths_mm is not None:
             lengths_mm= [
                 (l - self.L_LEG) for l in lengths_mm]
             
             formatted_lengths = [f"{l:.4f}" for l in lengths_mm]
-            self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
+            # self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
         
             real_cylinder_lengths = [f"{l + self.L_HOME :.4f}" for l in lengths_mm]
 
-            self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
+            # self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
 
             self.publish_trajectory(lengths_mm, duration=5)
 
@@ -234,7 +235,7 @@ class Kinematics(Node):
 
         self.circle_points= self.generate_trajectory_circle(radius, target_velocity)
         
-        self.get_logger().info(f'quy dao: R={radius}, V={target_velocity}, dt={self.TIME_TRAJECTORY:.4f}s ---')
+        # self.get_logger().info(f'quy dao: R={radius}, V={target_velocity}, dt={self.TIME_TRAJECTORY:.4f}s ---')
 
         # lay toa do diem dau tien quy dao moi [x, y, z, r, p, y]
         first_pose = self.circle_points[0]['pos']
@@ -312,17 +313,16 @@ class Kinematics(Node):
             return
 
         if self.current_point_idx + 1 >= len(self.circle_points):
-            self.get_logger().info('hoan thanh')
+            # self.get_logger().info('hoan thanh')
             self.current_point_idx = 0
 
-            self.get_logger().info(f'toa do hien tai la: {self.joint_positions}')
             self.is_running_circle = False
 
             # huy timer de chay 1 lan 
-            # if self.timer is not None:
-            #     self.timer.cancel()
-            #     self.timer = None
-            #     return
+            if self.timer is not None:
+                self.timer.cancel()
+                self.timer = None
+                return
             
         p = self.circle_points[self.current_point_idx]
 

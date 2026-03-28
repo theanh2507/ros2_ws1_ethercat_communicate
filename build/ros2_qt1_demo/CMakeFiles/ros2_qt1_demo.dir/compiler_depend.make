@@ -3308,6 +3308,11 @@ CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o: /home/theanh/ros2_ws1/src/ros
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
@@ -4125,11 +4130,15 @@ CMakeFiles/ros2_qt1_demo.dir/src/ros2_worker.cpp.o: /home/theanh/ros2_ws1/src/ro
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h:
 
 ros2_qt1_demo_autogen/include/ui_mainwindow.h:
 
@@ -5349,6 +5358,8 @@ ros2_qt1_demo_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h:
@@ -5693,6 +5704,8 @@ ros2_qt1_demo_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:
@@ -5724,6 +5737,8 @@ ros2_qt1_demo_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox:
 
 /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:
 

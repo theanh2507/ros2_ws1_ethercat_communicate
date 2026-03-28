@@ -133,7 +133,7 @@ MainWindow::MainWindow(QWidget *parent)
             QThread::msleep(80);
         }
     });
-    
+
     // Jogging buttons
     connect(ui->pushButton_3, &QPushButton::pressed, this, &MainWindow::jogPDirection);
     connect(ui->pushButton_3, &QPushButton::released, this, &MainWindow::stopMotor);
@@ -181,11 +181,37 @@ void MainWindow::startServiceEtherCAT()
 
 void MainWindow::enableMotor()
 {
-    auto message = std_msgs::msg::String();
-    message.data = "enable";
-    publisherMode->publish(message);
-    
-    qDebug() << "Published 'enable' command to ROS";
+    QProcess *process = new QProcess(this);
+
+    QString program = "/bin/bash";
+    QString wsPath = "/home/theanh/ros2_ws1";
+    QString scriptPath = wsPath + "/src/control_one_motor_pkg_ex/scripts/sync_axis.py";
+
+
+    QString command = QString("python3 %1").arg(scriptPath);
+
+    QStringList arguments;
+    arguments << "-c" << command; 
+
+    process->start(program, arguments);
+
+    connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [=](int exitCode) {
+        if (exitCode == 0) {
+            auto message = std_msgs::msg::String();
+            message.data = "enable";
+            publisherMode->publish(message);
+            
+            qDebug() << "Published 'enable' command to ROS";
+
+        } else {
+            qDebug() << " Can't enable motor because Sync Failed";
+        }
+        process->deleteLater();
+    });
+
+    // auto message = std_msgs::msg::String();
+    // message.data = "enable";
+    // publisherMode->publish(message);
 }
 
 void MainWindow::disableMotor()

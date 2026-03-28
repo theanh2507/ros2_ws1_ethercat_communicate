@@ -782,12 +782,19 @@ CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \

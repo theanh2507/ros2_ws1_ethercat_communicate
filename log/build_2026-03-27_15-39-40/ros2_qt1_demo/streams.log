@@ -1,0 +1,30 @@
+[0.016s] Invoking command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ros2_qt1_demo -- -j15 -l15
+[0.079s] [ 14%] [34m[1mAutomatic MOC and UIC for target ros2_qt1_demo[0m
+[0.451s] [ 14%] Built target ros2_qt1_demo_autogen
+[0.473s] [35m[1mConsolidate compiler generated dependencies of target ros2_qt1_demo[0m
+[0.516s] [ 28%] [32mBuilding CXX object CMakeFiles/ros2_qt1_demo.dir/ros2_qt1_demo_autogen/mocs_compilation.cpp.o[0m
+[0.517s] [ 42%] [32mBuilding CXX object CMakeFiles/ros2_qt1_demo.dir/src/main.cpp.o[0m
+[0.518s] [ 57%] [32mBuilding CXX object CMakeFiles/ros2_qt1_demo.dir/src/mainwindow.cpp.o[0m
+[6.467s] [ 71%] [32m[1mLinking CXX executable ros2_qt1_demo[0m
+[7.686s] [100%] Built target ros2_qt1_demo
+[7.699s] Invoked command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ros2_qt1_demo -- -j15 -l15
+[7.700s] Invoking command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ros2_qt1_demo
+[7.709s] -- Install configuration: ""
+[7.709s] -- Execute custom install script
+[7.709s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/lib/ros2_qt1_demo/ros2_qt1_demo
+[7.709s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/package_run_dependencies/ros2_qt1_demo
+[7.710s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/parent_prefix_path/ros2_qt1_demo
+[7.710s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/ament_prefix_path.sh
+[7.710s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/ament_prefix_path.dsv
+[7.710s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/path.sh
+[7.710s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/environment/path.dsv
+[7.710s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.bash
+[7.710s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.sh
+[7.711s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.zsh
+[7.711s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/local_setup.dsv
+[7.711s] -- Symlinking: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.dsv
+[7.721s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ament_index/resource_index/packages/ros2_qt1_demo
+[7.721s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/cmake/ros2_qt1_demoConfig.cmake
+[7.721s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/cmake/ros2_qt1_demoConfig-version.cmake
+[7.721s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ros2_qt1_demo/share/ros2_qt1_demo/package.xml
+[7.723s] Invoked command in '/home/theanh/ros2_ws1/build/ros2_qt1_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ros2_qt1_demo

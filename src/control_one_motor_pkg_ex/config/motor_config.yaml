@@ -28,3 +28,5 @@ tpdo:
       - {index: 0x6077, sub_index: 0, type: int16, state_interface: effort} # 2 byte
       - {index: 0x60FD, sub_index: 0, type: uint32, state_interface: digital_inputs} # 1 byte
       - {index: 0x6061, sub_index: 0, type: int8, state_interface: mode_of_operation} # 1 byte
+      - {index: 0x6078, sub_index: 0, type: int16, state_interface: electric_current} # 1 byte
+      # - {index: 0x6075, sub_index: 0, type: uint32, state_interface: rated_current} # 1 byte

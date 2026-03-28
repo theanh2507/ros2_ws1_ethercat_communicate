@@ -17,8 +17,9 @@
         <!-- <state_interface name="digital_inputs"/> -->
         <state_interface name="status_word"/>
         <state_interface name="mode_of_operation"/>
+        <state_interface name="electric_current"/>
+        <!-- <state_interface name="rated_current"/> -->
         
-
         <!-- <command_interface name="velocity"/> -->
         <!-- <command_interface name="mode_of_operation"/> -->
         <command_interface name="position"/>
@@ -42,6 +43,8 @@
         <!-- <state_interface name="digital_inputs"/> -->
         <state_interface name="status_word"/>
         <state_interface name="mode_of_operation"/>
+        <state_interface name="electric_current"/>
+        <!-- <state_interface name="rated_current"/> -->
 
         <!-- <command_interface name="velocity"/> -->
         <!-- <command_interface name="mode_of_operation"/> -->
@@ -66,6 +69,8 @@
         <!-- <state_interface name="digital_inputs"/> -->
         <state_interface name="status_word"/>
         <state_interface name="mode_of_operation"/>
+        <state_interface name="electric_current"/>
+        <!-- <state_interface name="rated_current"/> -->
 
         <!-- <command_interface name="velocity"/> -->
         <!-- <command_interface name="mode_of_operation"/> -->
@@ -89,6 +94,8 @@
         <!-- <state_interface name="digital_inputs"/> -->
         <state_interface name="status_word"/>
         <state_interface name="mode_of_operation"/>
+        <state_interface name="electric_current"/>
+        <!-- <state_interface name="rated_current"/> -->
 
         <!-- <command_interface name="velocity"/> -->
         <!-- <command_interface name="mode_of_operation"/> -->
@@ -112,6 +119,8 @@
         <!-- <state_interface name="digital_inputs"/> -->
         <state_interface name="status_word"/>
         <state_interface name="mode_of_operation"/>
+        <state_interface name="electric_current"/>
+        <!-- <state_interface name="rated_current"/> -->
 
         <!-- <command_interface name="velocity"/> -->
         <!-- <command_interface name="mode_of_operation"/> -->
@@ -135,6 +144,8 @@
         <!-- <state_interface name="digital_inputs"/> -->
         <state_interface name="status_word"/>
         <state_interface name="mode_of_operation"/>
+        <state_interface name="electric_current"/>
+        <!-- <state_interface name="rated_current"/> -->
 
         <!-- <command_interface name="velocity"/> -->
         <!-- <command_interface name="mode_of_operation"/> -->

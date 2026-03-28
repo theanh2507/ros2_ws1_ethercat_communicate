@@ -135,3 +135,4 @@ def generate_launch_description():
 # watch -n 0.1 "ethercat upload -p 0 -t uint32 0x60FD 0"
 # ros2 topic echo /trajectory_controller/state
 # ros2 control set_controller_state trajectory_controller active
+# ros2 topic hz /trajectory_controller/joint_trajectory

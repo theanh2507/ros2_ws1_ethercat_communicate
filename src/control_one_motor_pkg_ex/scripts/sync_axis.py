@@ -1,82 +1,113 @@
 #!/usr/bin/env python3
 import rclpy
-from ethercat_msgs.srv import GetSdo, SetSdo
+from rclpy.node import Node
+from sensor_msgs.msg import JointState
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from builtin_interfaces.msg import Duration
+from control_msgs.msg import JointTrajectoryControllerState
 import sys
 import time
 
+class SyncPositionNode(Node):
+    def __init__(self):
+        super().__init__('sync_pos_node')
+        
+        self.joint_sub = self.create_subscription(
+            JointState,
+            '/joint_states',
+            self.joint_state_callback,
+            10)
+        
+        self.goal_pub = self.create_publisher(
+            JointTrajectory, 
+            '/trajectory_controller/joint_trajectory', 
+            10)
+        
+        self.current_actual_positions = None
+        self.joint_names = None
+        self.get_logger().info("--- Dang cho du lieu tu /joint_states ---")
+
+        # kiem tra chac chan desired bang actual
+        self.current_desired_positions = None
+        self.state_sub = self.create_subscription(
+            JointTrajectoryControllerState,
+            '/trajectory_controller/state',
+            self.state_callback,
+            10)
+
+    def joint_state_callback(self, msg):
+        if len(msg.position) >= 6:
+            self.current_actual_positions = list(msg.position)
+            self.joint_names = msg.name
+
+    def state_callback(self, msg):
+        self.current_desired_positions = list(msg.desired.positions)
+
+    def sync_controller(self):
+        self.get_logger().info("--- Dang bat dau quy trinh dong bo ---")
+        
+        # thiet lap thoi gian cho (Timeout) 5 giay
+        start_wait = self.get_clock().now()
+        timeout_duration = rclpy.duration.Duration(seconds=5.0)
+
+        # Doi cho den khi co du lieu actual_positions tu joint_states
+        while rclpy.ok() and self.current_actual_positions is None:
+            rclpy.spin_once(self, timeout_sec=0.1)
+            
+            elapsed_time = self.get_clock().now() - start_wait
+            if elapsed_time > timeout_duration:
+                self.get_logger().error("FAILURE: Khong nhan duoc du lieu tu JointState sau 5s!")
+                rclpy.shutdown()
+                sys.exit(1)
+
+        # Neu da co du lieu, tien hanh gui lenh dong bo
+        self.get_logger().info(f"Da nhan duoc vi tri thuc te: {self.current_actual_positions}")
+
+        msg = JointTrajectory()
+        msg.joint_names = self.joint_names if self.joint_names else [f'joint_{i+1}' for i in range(6)]
+
+        point = JointTrajectoryPoint()
+        point.positions = self.current_actual_positions
+        point.velocities = [0.0] * len(self.current_actual_positions)
+        point.time_from_start = Duration(sec=0, nanosec=200000000) # 0.2s
+        msg.points.append(point)
+
+        # Gui lenh va xac nhan (Thuc hien gui trong 1 giay)
+        publish_start = time.time()
+        tolerance = 5          #pulse
+        try:
+            while time.time() - publish_start < 1.0:
+                msg.header.stamp = self.get_clock().now().to_msg()
+                self.goal_pub.publish(msg)
+                rclpy.spin_once(self, timeout_sec=0.1)
+
+            if self.current_desired_positions is not None:
+                errors = [abs(d - a) for d, a in zip(self.current_desired_positions, self.current_actual_positions)]
+                # self.get_logger().info(f"errors: Desired da khop voi Actual (Error: {errors})")
+                max_error = max(errors)
+                
+                if max_error <= tolerance:
+                    self.get_logger().info(f"SUCCESS: Desired da khop voi Actual (Error: {max_error:.4f})")
+                    sys.exit(0)
+                else:
+                    # self.get_logger().warn(f"Dang doi Controller cap nhat... Error hien tai: {max_error:.4f}")
+                    return
+            
+        except Exception as e:
+            self.get_logger().error(f"FAILURE: Loi khi publish quy dao: {e}")
+            sys.exit(1)
+
 def main():
     rclpy.init()
-    node = rclpy.create_node('sync_pos_node')
+    node = SyncPositionNode()
     
-    get_client = node.create_client(GetSdo, '/ethercat_manager/get_sdo')
-    set_client = node.create_client(SetSdo, '/ethercat_manager/set_sdo')
-    goal_pub = node.create_publisher(JointTrajectory, '/trajectory_controller/joint_trajectory', 10)
-    
-    node.get_logger().info("--- Dang xoa vi tri cu, dong bo ve vi tri thuc te hien tai ---")
-
-    all_success = True
-    current_positions = [0.0] * 6 
-
-    for i in range(6): 
-        # 1. Doc vi tri THUC TE (0x6064)
-        req_get = GetSdo.Request()  
-        req_get.slave_position = i
-        req_get.sdo_index = 0x6064
-        req_get.sdo_data_type = 'int32'
-
-        future = get_client.call_async(req_get)
-        rclpy.spin_until_future_complete(node, future)
-        
-        res_get = future.result()
-        if res_get.success:
-            actual_pos = float(res_get.sdo_return_value)
-            current_positions[i] = actual_pos
-
-            # 2. Ghi vao Target Position (0x607A) de dong bo voi vi tri thuc te
-            req_set = SetSdo.Request()
-            req_set.slave_position = i
-            req_set.sdo_index = 0x607A
-            req_set.sdo_subindex = 0
-            req_set.sdo_data_type = 'int32'
-            req_set.sdo_value = str(int(actual_pos))
-            
-            set_future = set_client.call_async(req_set)
-            rclpy.spin_until_future_complete(node, set_future)
-            
-            node.get_logger().info(f"Chan {i}: Thuc te {actual_pos} -> Da ghi vao Target SDO")
-        else:
-            all_success = False
-            node.get_logger().error(f"Loi doc SDO chan {i}")
-
-    if not all_success:
-        node.get_logger().error("DONG BO THAT BAI! Dung toan bo quy trinh.")
+    try:
+        node.sync_controller()
+    except Exception as e:
+        node.get_logger().error(f"Loi: {e}")
+    finally:
         node.destroy_node()
         rclpy.shutdown()
-        sys.exit(1)
-
-    # --- GUI GOAL DE DE BUFFER CUA TRAJECTORY_CONTROLLER ---
-    msg = JointTrajectory()
-    msg.joint_names = ['joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6'] 
-    
-    point = JointTrajectoryPoint()
-    point.positions = current_positions
-    # point.time_from_start = Duration(sec=0, nanosec=10000000) # 10ms de Controller kip nhan lenh
-    point.time_from_start = Duration(sec=1, nanosec=0)
-    
-    msg.points.append(point)
-    
-    # Publish 5 lan lien tiep de chac chan Controller nhan duoc
-    for _ in range(5):
-        goal_pub.publish(msg)
-        time.sleep(0.01)
-
-    node.get_logger().info(f"Da dong bo xong ca 6 chan ve vi tri: {current_positions}")
-    
-    time.sleep(0.1)
-    node.destroy_node()
-    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
