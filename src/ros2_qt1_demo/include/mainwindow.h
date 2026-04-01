@@ -2,8 +2,6 @@
 #define MAINWINDOW_H
 
 
-
-
 #include <QMainWindow>
 #include <QDebug>
 #include <QProcess>
@@ -54,6 +52,9 @@ private:
     std::shared_ptr<rclcpp::Node> nodeMoveToPositions;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publishPose;
 
+    std::shared_ptr<rclcpp::Node> nodeTrajectory;
+    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publishTrajectory;
+
 
     void onButtonClicked();
     void startServiceEtherCAT();
@@ -77,5 +78,7 @@ private:
     void sendVelHomeToRos();
 
     void sendPose();
+
+    void runTrajectoryCircle();
 };
 #endif // MAINWINDOW_H

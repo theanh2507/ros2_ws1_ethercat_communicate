@@ -139,6 +139,8 @@ public:
     QDoubleSpinBox *doubleSpinBox_6;
     QPushButton *pushButton_21;
     QSpacerItem *horizontalSpacer_2;
+    QPushButton *pushButton_22;
+    QSpacerItem *horizontalSpacer_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -710,6 +712,15 @@ public:
 
         horizontalLayout_10->addItem(horizontalSpacer_2);
 
+        pushButton_22 = new QPushButton(centralwidget);
+        pushButton_22->setObjectName(QString::fromUtf8("pushButton_22"));
+
+        horizontalLayout_10->addWidget(pushButton_22);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_3);
+
 
         verticalLayout_18->addLayout(horizontalLayout_10);
 
@@ -781,6 +792,7 @@ public:
         label_17->setText(QCoreApplication::translate("MainWindow", "Pitch", nullptr));
         label_18->setText(QCoreApplication::translate("MainWindow", "Yaw", nullptr));
         pushButton_21->setText(QCoreApplication::translate("MainWindow", "Run", nullptr));
+        pushButton_22->setText(QCoreApplication::translate("MainWindow", "Run trajectory", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
         toolBar_2->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar_2", nullptr));
         toolBar_3->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar_3", nullptr));

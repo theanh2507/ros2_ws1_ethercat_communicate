@@ -25,7 +25,7 @@ class DisplayChart(Node):
                 self.joint_state_callback,
                 10)
 
-            
+            self.pub_len_leg = self.create_publisher(Float64MultiArray, "len_leg_topic", 10)
             self.pub_velocity = self.create_publisher(Float64MultiArray, "chart_velocity_topic", 10)
             self.pub_effort = self.create_publisher(Float64MultiArray, "chart_effort_topic", 10)
             self.create_timer(0.05, self.pub_convert_value)             # 20Hz

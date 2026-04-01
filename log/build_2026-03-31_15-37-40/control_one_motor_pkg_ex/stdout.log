@@ -1,0 +1,23 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/launch/robot_control.launch.py
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/config/hexapod_controller.yaml
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/config/motor_config.yaml
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/motor_drive.ros2_control.xacro
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/robot.urdf.xacro
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/robot_core.xacro
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/package_run_dependencies/control_one_motor_pkg_ex
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/parent_prefix_path/control_one_motor_pkg_ex
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/path.sh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/path.dsv
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.bash
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.sh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.zsh
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/local_setup.dsv
+-- Symlinking: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.dsv
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/packages/control_one_motor_pkg_ex
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/cmake/control_one_motor_pkg_exConfig.cmake
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/cmake/control_one_motor_pkg_exConfig-version.cmake
+-- Up-to-date symlink: /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/package.xml

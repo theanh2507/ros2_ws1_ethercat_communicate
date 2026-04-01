@@ -112,6 +112,15 @@ def generate_launch_description():
                 'use_sim_time': False,         
             }],
         ),
+    
+
+    rt = Node(
+            package='control_one_motor_pkg_ex',
+            executable='inverse_kinematic.py',
+            name='stewart_controller',
+            prefix=['taskset -c 3'], 
+            output='screen'
+        )
 
     nodes = [
         control_node,

@@ -1,0 +1,76 @@
+[0.160s] Invoking command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_generic_slave -- -j15 -l15
+[0.268s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.433s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.491s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.494s] -- Found ethercat_interface: 1.2.0 (/home/theanh/ros2_ws1/install/ethercat_interface/share/ethercat_interface/cmake)
+[0.529s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.531s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.537s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.548s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.561s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.594s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.596s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.752s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.804s] -- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)
+[0.832s] -- Found yaml_cpp_vendor: 8.0.2 (/opt/ros/humble/share/yaml_cpp_vendor/cmake)
+[0.839s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.922s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[0.924s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.944s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.946s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.946s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave/include>;/home/theanh/ros2_ws1/src/ethercat_driver_ros2/ethercat_generic_plugins/ethercat_generic_slave/include
+[0.946s] -- Configured cppcheck exclude dirs and/or files: 
+[0.947s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.947s] -- Configured cpplint exclude dirs and/or files: 
+[0.948s] -- Added test 'lint_cmake' to check CMake code style
+[0.950s] -- Added test 'uncrustify' to check C / C++ code style
+[0.950s] -- Configured uncrustify additional arguments: 
+[0.950s] -- Added test 'xmllint' to check XML markup files
+[0.955s] -- Configuring done
+[1.161s] -- Generating done
+[1.173s] -- Build files have been written to: /home/theanh/ros2_ws1/build/ethercat_generic_slave
+[1.243s] [35m[1mConsolidate compiler generated dependencies of target ethercat_generic_slave[0m
+[1.244s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[1.245s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[1.269s] [  9%] [32m[1mLinking CXX shared library libethercat_generic_slave.so[0m
+[1.281s] [ 54%] Built target gmock
+[1.281s] [ 54%] Built target gmock_main
+[1.350s] [35m[1mConsolidate compiler generated dependencies of target test_load_generic_plugins[0m
+[1.409s] [ 63%] [32m[1mLinking CXX executable test_load_generic_plugins[0m
+[1.900s] [ 72%] Built target ethercat_generic_slave
+[1.985s] [35m[1mConsolidate compiler generated dependencies of target test_generic_ec_slave[0m
+[2.009s] [ 81%] [32m[1mLinking CXX executable test_generic_ec_slave[0m
+[2.666s] [ 90%] Built target test_generic_ec_slave
+[2.681s] [100%] Built target test_load_generic_plugins
+[2.699s] Invoked command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/theanh/ros2_ws1/build/ethercat_generic_slave -- -j15 -l15
+[2.702s] Invoking command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_generic_slave
+[2.714s] -- Install configuration: ""
+[2.715s] -- Execute custom install script
+[2.715s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave//ethercat_plugins.xml
+[2.716s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/include/ethercat_generic_plugins/generic_ec_slave.hpp
+[2.716s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/environment/library_path.sh
+[2.716s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/environment/library_path.dsv
+[2.717s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ament_index/resource_index/package_run_dependencies/ethercat_generic_slave
+[2.717s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ament_index/resource_index/parent_prefix_path/ethercat_generic_slave
+[2.717s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/environment/ament_prefix_path.sh
+[2.717s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/environment/ament_prefix_path.dsv
+[2.718s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/environment/path.sh
+[2.718s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/environment/path.dsv
+[2.718s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/local_setup.bash
+[2.718s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/local_setup.sh
+[2.719s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/local_setup.zsh
+[2.719s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/local_setup.dsv
+[2.719s] -- Symlinking: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.dsv
+[2.735s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ament_index/resource_index/packages/ethercat_generic_slave
+[2.735s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ament_index/resource_index/ethercat_interface__pluginlib__plugin/ethercat_generic_slave
+[2.735s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.735s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/cmake/ament_cmake_export_libraries-extras.cmake
+[2.736s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/cmake/ament_cmake_export_targets-extras.cmake
+[2.736s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/cmake/ethercat_generic_slaveConfig.cmake
+[2.736s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/cmake/ethercat_generic_slaveConfig-version.cmake
+[2.736s] -- Up-to-date symlink: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/package.xml
+[2.736s] -- Installing: /home/theanh/ros2_ws1/install/ethercat_generic_slave/lib/libethercat_generic_slave.so
+[2.739s] -- Set runtime path of "/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib/libethercat_generic_slave.so" to ""
+[2.739s] -- Up-to-date: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/cmake/export_ethercat_generic_slaveExport.cmake
+[2.739s] -- Up-to-date: /home/theanh/ros2_ws1/install/ethercat_generic_slave/share/ethercat_generic_slave/cmake/export_ethercat_generic_slaveExport-noconfig.cmake
+[2.743s] Invoked command in '/home/theanh/ros2_ws1/build/ethercat_generic_slave' returned '0': AMENT_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/gui_rviz2_qt5/install/gui_agv:/home/theanh/can_example_ws/install/canopen_tests:/home/theanh/can_example_ws/install/canopen_ros2_controllers:/home/theanh/can_example_ws/install/canopen_ros2_control:/home/theanh/can_example_ws/install/canopen:/home/theanh/can_example_ws/install/canopen_402_driver:/home/theanh/can_example_ws/install/canopen_proxy_driver:/home/theanh/can_example_ws/install/canopen_master_driver:/home/theanh/can_example_ws/install/canopen_fake_slaves:/home/theanh/can_example_ws/install/canopen_base_driver:/home/theanh/can_example_ws/install/canopen_core:/home/theanh/can_example_ws/install/lely_core_libraries:/home/theanh/can_example_ws/install/canopen_interfaces:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/home/theanh/mobile_rb_ws/install/sam_bot_description:/home/theanh/mobile_rb_ws/install/nav2_straightline_planner:/home/theanh/mobile_rb_ws/install/nav2_gradient_costmap_plugin:/home/theanh/mobile_rb_ws/install/nav2_costmap_filters_demo:/home/theanh/mobile_rb_ws/install/custom_nav2_costmap_plugin:/home/theanh/mobile_rb_ws/install/articubot_one:/home/theanh/can_example_ws/install/canopen_utils:/home/theanh/mobile_rb_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/humble LD_LIBRARY_PATH=/home/theanh/ros2_ws1/install/ethercat_interface/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/theanh/ros2_ws1/build/ethercat_generic_slave

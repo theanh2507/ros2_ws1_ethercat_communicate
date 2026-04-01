@@ -29,7 +29,8 @@ trajectory_controller:
       - joint_5
       - joint_6
     # true: open loop control, false: close loop control
-    open_loop_control: false    
+    open_loop_control: false 
+    interpolation_method: splines   
     # generate_interpolation_points: true 
 
 velocity_controller:

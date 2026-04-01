@@ -87,7 +87,7 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
 
-    // thiet lap publisher de gui lenh vel homing tu GUI sang ROS
+    // thiet lap publisher de gui lenh chon mode tu GUI sang ROS
     nodeMode = rclcpp::Node::make_shared("gui_mode_publisher");
     publisherMode = nodeMode->create_publisher<std_msgs::msg::String>("motor_command", 10);
 
@@ -143,6 +143,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Move to position button
     connect(ui->pushButton_9, &QPushButton::clicked, this, &MainWindow::moveToPosition);
+
+
+    // run trajectory circle
+    nodeTrajectory = rclcpp::Node::make_shared("nodeTrajectory");
+    publishTrajectory = nodeTrajectory->create_publisher<std_msgs::msg::String>("cmd_trajectory", 10);
+    connect(ui->pushButton_22, &QPushButton::clicked, this, &MainWindow::runTrajectoryCircle);
 }
 
 MainWindow::~MainWindow()
@@ -181,37 +187,37 @@ void MainWindow::startServiceEtherCAT()
 
 void MainWindow::enableMotor()
 {
-    QProcess *process = new QProcess(this);
+    // QProcess *process = new QProcess(this);
 
-    QString program = "/bin/bash";
-    QString wsPath = "/home/theanh/ros2_ws1";
-    QString scriptPath = wsPath + "/src/control_one_motor_pkg_ex/scripts/sync_axis.py";
+    // QString program = "/bin/bash";
+    // QString wsPath = "/home/theanh/ros2_ws1";
+    // QString scriptPath = wsPath + "/src/control_one_motor_pkg_ex/scripts/sync_axis.py";
 
 
-    QString command = QString("python3 %1").arg(scriptPath);
+    // QString command = QString("python3 %1").arg(scriptPath);
 
-    QStringList arguments;
-    arguments << "-c" << command; 
+    // QStringList arguments;
+    // arguments << "-c" << command; 
 
-    process->start(program, arguments);
+    // process->start(program, arguments);
 
-    connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [=](int exitCode) {
-        if (exitCode == 0) {
-            auto message = std_msgs::msg::String();
-            message.data = "enable";
-            publisherMode->publish(message);
+    // connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [=](int exitCode) {
+    //     if (exitCode == 0) {
+    //         auto message = std_msgs::msg::String();
+    //         message.data = "enable";
+    //         publisherMode->publish(message);
             
-            qDebug() << "Published 'enable' command to ROS";
+    //         qDebug() << "Published 'enable' command to ROS";
 
-        } else {
-            qDebug() << " Can't enable motor because Sync Failed";
-        }
-        process->deleteLater();
-    });
+    //     } else {
+    //         qDebug() << " Can't enable motor because Sync Failed";
+    //     }
+    //     process->deleteLater();
+    // });
 
-    // auto message = std_msgs::msg::String();
-    // message.data = "enable";
-    // publisherMode->publish(message);
+    auto message = std_msgs::msg::String();
+    message.data = "enable";
+    publisherMode->publish(message);
 }
 
 void MainWindow::disableMotor()
@@ -427,3 +433,9 @@ void MainWindow::sendPose()
     publishPose->publish(msg);
 }
 
+
+void MainWindow::runTrajectoryCircle() {
+    auto message = std_msgs::msg::String();
+    message.data = "run trajectory";
+    publishTrajectory->publish(message);
+}
