@@ -1,0 +1,1 @@
+/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex/scripts/display_chart.py

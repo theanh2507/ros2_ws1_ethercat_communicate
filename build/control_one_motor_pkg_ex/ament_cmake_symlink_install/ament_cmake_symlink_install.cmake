@@ -318,8 +318,8 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "launch" "rviz" "config" "description" "DESTINATION" "share/control_one_motor_pkg_ex")
 ament_cmake_symlink_install_directory("/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex" DIRECTORY "launch" "rviz" "config" "description" "DESTINATION" "share/control_one_motor_pkg_ex")
 
-# install(PROGRAMS "scripts/inverse_kinematic.py" "DESTINATION" "lib/control_one_motor_pkg_ex")
-ament_cmake_symlink_install_programs("/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex" PROGRAMS "scripts/inverse_kinematic.py" "DESTINATION" "lib/control_one_motor_pkg_ex")
+# install(PROGRAMS "scripts/inverse_kinematic.py" "scripts/display_chart.py" "scripts/status_motor.py" "DESTINATION" "lib/control_one_motor_pkg_ex")
+ament_cmake_symlink_install_programs("/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex" PROGRAMS "scripts/inverse_kinematic.py" "scripts/display_chart.py" "scripts/status_motor.py" "DESTINATION" "lib/control_one_motor_pkg_ex")
 
 # install(FILES "/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control_one_motor_pkg_ex" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/theanh/ros2_ws1/src/control_one_motor_pkg_ex" FILES "/home/theanh/ros2_ws1/build/control_one_motor_pkg_ex/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control_one_motor_pkg_ex" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

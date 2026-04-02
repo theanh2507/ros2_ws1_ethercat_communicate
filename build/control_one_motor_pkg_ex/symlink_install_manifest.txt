@@ -5,6 +5,8 @@
 /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/robot.urdf.xacro
 /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/description/urdf/robot_core.xacro
 /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/lib/control_one_motor_pkg_ex/inverse_kinematic.py
+/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/lib/control_one_motor_pkg_ex/display_chart.py
+/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/lib/control_one_motor_pkg_ex/status_motor.py
 /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/package_run_dependencies/control_one_motor_pkg_ex
 /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/ament_index/resource_index/parent_prefix_path/control_one_motor_pkg_ex
 /home/theanh/ros2_ws1/install/control_one_motor_pkg_ex/share/control_one_motor_pkg_ex/environment/ament_prefix_path.sh

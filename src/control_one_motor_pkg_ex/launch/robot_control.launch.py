@@ -103,22 +103,25 @@ def generate_launch_description():
         )
     )
 
-    status_motor = Node(
-            package='control_one_motor_pkg',
-            executable='status_motor', 
-            name='stewart_ik_node',            
-            output='screen',                   
-            parameters=[{
-                'use_sim_time': False,         
-            }],
-        ),
-    
-
     rt = Node(
             package='control_one_motor_pkg_ex',
             executable='inverse_kinematic.py',
             name='stewart_controller',
             prefix=['taskset -c 3'], 
+            output='screen'
+        )
+    
+    display_chart_node = Node(
+            package='control_one_motor_pkg_ex',
+            executable='display_chart.py',
+            name='display_chart_node',
+            output='screen'
+        )
+    
+    status_motor = Node(
+            package='control_one_motor_pkg_ex',
+            executable='status_motor.py',
+            name='status_motor_node',
             output='screen'
         )
 
@@ -129,6 +132,8 @@ def generate_launch_description():
         # velocity_controller_spawner,
         # trajectory_controller_spawner,
         delay_controller,
+        display_chart_node,
+        status_motor,
         # rviz_node,
     ]
 

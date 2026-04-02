@@ -25,11 +25,9 @@ class Kinematics(Node):
         self.LEAD_SCREW_MM = 5.0      # 5 mm
         self.PULSE_TO_MM = self.LEAD_SCREW_MM / self.PULSE_PER_REV
 
-        self.L_HOME = 30.0                      # mm
-        # self.L_LEG = 1042.0                   # 930 + 54
-        self.L_LEG = 1016.7178                  # do dai xy lanh giua 2 mp base va plat khi Z=982 (da bao gom 30mm di ra)
-        # self.L_LEG = 1002.27
-        self.Z_OFFSET = 982.0 + 173.5947        # Z_OFFSET = 982 + 173.5947 (982: z home) (khi do xy lanh di ra 20cm)
+        self.L_HOME = 30.0                      # mm         
+        self.L_LEG = 1021                       # do dai xy lanh giua 2 mp base va plat khi Z=984 (da bao gom 30mm di ra)
+        self.Z_OFFSET = 984.0 + 177.5947        # Z_OFFSET = 984 + 177.5947 (984: z home) (khi do xy lanh di ra 30cm)
 
         self.circle_points = []
         self.is_running_circle = False
@@ -49,7 +47,7 @@ class Kinematics(Node):
             10)
 
         # nhan pose gui tu qt
-        # self.subscriptionPose = self.create_subscription(Float64MultiArray, 'pos_and_rotate_angle_topic', self.subPoseCallBack, 10)
+        self.subscriptionPose = self.create_subscription(Float64MultiArray, 'pos_and_rotate_angle_topic', self.subPoseCallBack, 10)
         
         # self.get_logger().info('Inverse Kinematic Node has been started and listening to /joint_states')
 
@@ -108,11 +106,11 @@ class Kinematics(Node):
 
 
         # bat dau chay quy dao khi nhan duoc lenh tu qt gui sang
-        self.subscription = self.create_subscription(
-            String,
-            '/cmd_trajectory',
-            self.listener_callback,
-            10)
+        # self.subscription = self.create_subscription(
+        #     String,
+        #     '/cmd_trajectory',
+        #     self.listener_callback,
+        #     10)
 
     def listener_callback(self, msg):
         if msg.data == "run trajectory":
@@ -204,11 +202,11 @@ class Kinematics(Node):
                 (l - self.L_LEG) for l in lengths_mm]
             
             formatted_lengths = [f"{l:.4f}" for l in lengths_mm]
-            # self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
+            self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
         
             real_cylinder_lengths = [f"{l + self.L_HOME :.4f}" for l in lengths_mm]
 
-            # self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
+            self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
 
             self.publish_trajectory(lengths_mm, duration=5)
 
@@ -270,16 +268,35 @@ class Kinematics(Node):
         self.is_running_circle = True
         # sau thoi gian 5s (duration) bat dau chay quy dao
         # self.timer = self.create_timer(self.TIME_TRAJECTORY, self.run_trajectory)               # 100Hz
-        self.publish_whole_trajectory()
 
+        self.publish_whole_trajectory()
 
     def publish_whole_trajectory(self):
         msg = JointTrajectory()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.joint_names = [f'joint_{i+1}' for i in range(6)]
 
+        accumulation_time = 0.3 # thoi gian cho gui du lieu xuong cho controller
+        point_acc_decc = len(self.circle_points) * 0.05    # so diem dau va cuoi de tang giam toc
+        dt = self.TIME_TRAJECTORY
+
         for i, p in enumerate(self.circle_points):
-            # Tính toán IK cho từng điểm trong mảng
+            num_points = len(self.circle_points)
+
+            if i < point_acc_decc:
+                factor = 1.0 + 4.0 * (1.0 - i / point_acc_decc)
+                dt = self.TIME_TRAJECTORY * factor
+
+            elif (num_points - i) <= point_acc_decc:
+                count_from_end = num_points - i
+                factor = 1.0 + 4.0 * (1.0 - count_from_end / point_acc_decc)
+                dt = self.TIME_TRAJECTORY * factor
+            else:
+                dt = self.TIME_TRAJECTORY
+
+            accumulation_time += dt
+
+            
             target_T = np.array([p['pos'][0], p['pos'][1], p['pos'][2]])
             target_R = self.get_rotation_matrix(p['pos'][3], p['pos'][4], p['pos'][5])
             lengths_mm = self.calculate_inverse_kinematics(target_T, target_R)
@@ -289,18 +306,23 @@ class Kinematics(Node):
                 safe_lengths = [np.clip(l, -20.0, 370.0) for l in delta_mm]
 
                 point = JointTrajectoryPoint()
+
                 point.positions = [float(self.mm_to_pulse(l)) for l in safe_lengths]
                 
-                # tang dan time_from_start 
+                # tang dan time_from_start
                 # moi diem cach nhau TIME_TRAJECTORY
-                if i == 0 or i == len(self.circle_points) - 1:
-                    point.velocities = [0.0] * 6
-                else:
-                    point.velocities = [] 
+                # if i == 0 or i == len(self.circle_points) - 1:
+                #     point.velocities = [0.0] * 6
+                #     point.accelerations = [0.0] * 6
+                # else:
+                #     point.velocities = [] 
+                #     point.accelerations = [] 
 
-                # time_from_start nên bắt đầu từ một khoảng offset nhỏ (vd 0.1s)
-                # để JTC có thời gian chuẩn bị quỹ đạo nội suy
-                total_nanosecs = int((i + 1000) * self.TIME_TRAJECTORY * 1e9) 
+                point.velocities = [] 
+                point.accelerations = [] 
+
+                # total_nanosecs = int((i + 30) * self.TIME_TRAJECTORY * 1e9) 
+                total_nanosecs = int(accumulation_time * 1e9)
                 point.time_from_start = Duration(
                     sec=int(total_nanosecs // 1e9),
                     nanosec=int(total_nanosecs % 1e9)
@@ -318,7 +340,6 @@ class Kinematics(Node):
         if duration < 2.0: 
             duration = 2.0
             self.get_logger().warn(f'Thoi gian hoan thanh quy dao qua ngan (duoi 2s). Tu dong dieu chinh len 2s de dam bao robot co the theo kip quy dao.') 
-
         
         trajectory = []
 
@@ -334,7 +355,7 @@ class Kinematics(Node):
             z = self.Z_OFFSET
             
             trajectory.append({
-                'pos': [x, y, z, 0.0, 0.0, 0.0]
+                'pos': [x, y, z, -15.0, 0.0, 0.0]
             })
         return trajectory
     
@@ -350,10 +371,10 @@ class Kinematics(Node):
             lengths_mm= [
                 (l - self.L_LEG) for l in lengths_mm]
             
-            formatted_lengths = [f"{l:.4f}" for l in lengths_mm]
-            # self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
+            # formatted_lengths = [f"{l:.4f}" for l in lengths_mm]
+            # # self.get_logger().info(f'Gia tri do dai xy lanh can di chuyen tinh tu home la: {formatted_lengths}')
         
-            real_cylinder_lengths = [f"{l + self.L_HOME :.4f}" for l in lengths_mm]
+            # real_cylinder_lengths = [f"{l + self.L_HOME :.4f}" for l in lengths_mm]
 
             # self.get_logger().info(f'Gia tri do dai xy lanh 6 chan: {real_cylinder_lengths}')
             self.get_logger().info("bat dau di chuyen den diem start point")
@@ -367,7 +388,6 @@ class Kinematics(Node):
         if self.current_point_idx + 1 >= len(self.circle_points):
             # self.get_logger().info('hoan thanh')
             self.current_point_idx = 0
-
             self.is_running_circle = False
 
             # huy timer de chay 1 lan 

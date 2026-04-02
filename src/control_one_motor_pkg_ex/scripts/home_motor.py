@@ -8,7 +8,7 @@ import time
 class HomingManager(Node):
     def __init__(self):
         super().__init__('homing_manager')
-        # Tạo client cho Service Set/Get SDO
+
         self.set_sdo_client = self.create_client(SetSdo, '/ethercat_manager/set_sdo')
         self.get_sdo_client = self.create_client(GetSdo, '/ethercat_manager/get_sdo')
 

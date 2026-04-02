@@ -22,6 +22,8 @@ install(DIRECTORY
 
 install(PROGRAMS
   scripts/inverse_kinematic.py
+  scripts/display_chart.py
+  scripts/status_motor.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
